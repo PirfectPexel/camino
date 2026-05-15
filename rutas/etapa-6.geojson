@@ -41,6 +41,26 @@
       "type": "Feature",
       "properties": { "tipo": "fin", "nombre": "Santiago de Compostela" },
       "geometry": { "type": "Point", "coordinates": [-8.5446, 42.8806] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "tipo": "intermedio", "nombre": "A Escravitude", "ancla": "pueblo-a-escravitude" },
+      "geometry": { "type": "Point", "coordinates": [-8.6195, 42.7745] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "tipo": "intermedio", "nombre": "Picaraña", "ancla": "pueblo-picarana" },
+      "geometry": { "type": "Point", "coordinates": [-8.6125, 42.8060] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "tipo": "intermedio", "nombre": "Teo / Cacheiras", "ancla": "pueblo-teo" },
+      "geometry": { "type": "Point", "coordinates": [-8.5890, 42.8285] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "tipo": "intermedio", "nombre": "O Milladoiro", "ancla": "pueblo-o-milladoiro" },
+      "geometry": { "type": "Point", "coordinates": [-8.5750, 42.8550] }
     }
   ]
 }

@@ -36,6 +36,16 @@
       "type": "Feature",
       "properties": { "tipo": "fin", "nombre": "Padrón" },
       "geometry": { "type": "Point", "coordinates": [-8.6603, 42.7385] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "tipo": "intermedio", "nombre": "Carracedo", "ancla": "pueblo-carracedo" },
+      "geometry": { "type": "Point", "coordinates": [-8.6520, 42.6720] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "tipo": "intermedio", "nombre": "Pontecesures", "ancla": "pueblo-pontecesures" },
+      "geometry": { "type": "Point", "coordinates": [-8.6543, 42.7187] }
     }
   ]
 }

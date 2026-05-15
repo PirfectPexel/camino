@@ -38,6 +38,16 @@
       "type": "Feature",
       "properties": { "tipo": "fin", "nombre": "Caldas de Reis" },
       "geometry": { "type": "Point", "coordinates": [-8.6418, 42.6045] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "tipo": "intermedio", "nombre": "San Amaro", "ancla": "pueblo-san-amaro" },
+      "geometry": { "type": "Point", "coordinates": [-8.6510, 42.4685] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "tipo": "intermedio", "nombre": "Briallos", "ancla": "pueblo-briallos" },
+      "geometry": { "type": "Point", "coordinates": [-8.6388, 42.5345] }
     }
   ]
 }

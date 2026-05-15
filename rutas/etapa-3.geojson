@@ -38,6 +38,21 @@
       "type": "Feature",
       "properties": { "tipo": "fin", "nombre": "Pontevedra" },
       "geometry": { "type": "Point", "coordinates": [-8.6485, 42.4333] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "tipo": "intermedio", "nombre": "Cesantes", "ancla": "pueblo-cesantes" },
+      "geometry": { "type": "Point", "coordinates": [-8.5985, 42.3155] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "tipo": "intermedio", "nombre": "Arcade", "ancla": "pueblo-arcade" },
+      "geometry": { "type": "Point", "coordinates": [-8.5808, 42.3437] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "tipo": "intermedio", "nombre": "Ponte Sampaio", "ancla": "pueblo-ponte-sampaio" },
+      "geometry": { "type": "Point", "coordinates": [-8.6048, 42.3637] }
     }
   ]
 }
