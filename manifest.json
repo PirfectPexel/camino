@@ -1,0 +1,26 @@
+{
+  "name": "Camino Portugués",
+  "short_name": "Camino",
+  "description": "Guía personal del Camino Portugués (Tui → Santiago, mayo 2026)",
+  "start_url": "/camino/",
+  "scope": "/camino/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#2c5f3d",
+  "theme_color": "#2c5f3d",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "/camino/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/camino/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
