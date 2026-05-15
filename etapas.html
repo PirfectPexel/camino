@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#2c5f3d">
+  <title>Etapas · Camino Portugués</title>
+  <link rel="manifest" href="/camino/manifest.json">
+  <link rel="stylesheet" href="/camino/css/style.css">
+  <link rel="icon" type="image/png" sizes="192x192" href="/camino/icons/icon-192.png">
+</head>
+<body>
+  <header class="topbar">
+    <a href="/camino/" class="back" aria-label="Inicio">←</a>
+    <div class="title">📅 Las 7 etapas</div>
+  </header>
+
+  <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+  <div style="text-align:center;margin-top:-8px;font-size:12px;color:#5a6e5c" id="progress-text">0 de 7 etapas completadas</div>
+
+  <div class="timeline" id="timeline">
+    <!-- Inyectado por JS -->
+  </div>
+
+  <script type="module">
+    import { getCurrentStage } from '/camino/js/app.js';
+    import { isCompleted, getCompletedStages } from '/camino/js/progress.js';
+
+    const STAGES_INFO = [
+      { id: 0, sub: 'Llegada', tramo: 'Tui (sábado tarde)', km: null, fecha: 'Sáb 16 may' },
+      { id: 1, sub: '1', tramo: 'Tui → O Porriño',     km: 16, fecha: 'Dom 17 may' },
+      { id: 2, sub: '2', tramo: 'O Porriño → Redondela', km: 16, fecha: 'Lun 18 may' },
+      { id: 3, sub: '3', tramo: 'Redondela → Pontevedra', km: 20, fecha: 'Mar 19 may' },
+      { id: 4, sub: '4', tramo: 'Pontevedra → Caldas', km: 22, fecha: 'Mié 20 may' },
+      { id: 5, sub: '5', tramo: 'Caldas → Padrón',     km: 19, fecha: 'Jue 21 may' },
+      { id: 6, sub: '6', tramo: 'Padrón → Santiago',   km: 25, fecha: 'Vie 22 may' }
+    ];
+
+    const r = getCurrentStage();
+    const todayId = (r.label === 'today' || r.label === 'santiago') ? r.stageId : null;
+
+    const tl = document.getElementById('timeline');
+    tl.innerHTML = STAGES_INFO.map(s => {
+      const done = isCompleted(s.id);
+      const isToday = todayId === s.id;
+      const cls = ['t-item'];
+      if (done) cls.push('done');
+      if (isToday) cls.push('today');
+
+      const numCls = ['t-num'];
+      if (done) numCls.push('done');
+      if (isToday) numCls.push('today');
+
+      const numContent = done ? '✓' : s.sub;
+      const km = s.km ? `${s.km} km · ` : '';
+      const todayBadge = isToday ? ' <span style="color:#c89a3c;font-weight:700">· HOY</span>' : '';
+
+      return `
+        <a href="/camino/etapa-${s.id}.html" class="${cls.join(' ')}" style="text-decoration:none;color:inherit;display:flex">
+          <div class="${numCls.join(' ')}">${numContent}</div>
+          <div class="t-info">
+            <div class="t-titulo">${s.tramo}${todayBadge}</div>
+            <div class="t-meta">${km}${s.fecha}</div>
+          </div>
+        </a>
+      `;
+    }).join('');
+
+    const completed = getCompletedStages();
+    const pct = Math.round((completed.length / 7) * 100);
+    document.getElementById('progress-fill').style.width = pct + '%';
+    document.getElementById('progress-text').textContent =
+      `${completed.length} de 7 etapas completadas`;
+  </script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => navigator.serviceWorker.register('/camino/sw.js'));
+    }
+  </script>
+</body>
+</html>
