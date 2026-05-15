@@ -95,6 +95,14 @@ function init() {
     h.addEventListener('click', () => toggleAcc(h));
   });
 
+  // POI card expand/collapse
+  document.querySelectorAll('.poi-head').forEach(h => {
+    h.addEventListener('click', () => {
+      const poi = h.closest('.poi');
+      if (poi) poi.classList.toggle('open');
+    });
+  });
+
   const hash = location.hash.slice(1);
   if (hash) {
     const target = document.getElementById(hash);

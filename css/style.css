@@ -382,3 +382,104 @@ ul, ol { padding-left: 20px; }
 
 /* === ESTADOS GLOBALES === */
 .hidden { display: none !important; }
+
+/* === POI cards (expandibles, en Qué ver / Fotografía / Dónde comer / Hotel) === */
+.poi {
+  background: var(--blanco);
+  border-radius: 10px;
+  margin-bottom: 8px;
+  overflow: hidden;
+  border: 1px solid var(--borde);
+  border-left: 3px solid var(--dorado);
+}
+.poi-head {
+  width: 100%;
+  background: white;
+  border: none;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+  cursor: pointer;
+}
+.poi-head-text { flex: 1; min-width: 0; }
+.poi-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--verde-oscuro);
+}
+.poi-tags {
+  font-size: 12px;
+  color: var(--texto-suave);
+  margin-top: 2px;
+}
+.poi-chev {
+  color: var(--texto-disabled);
+  font-size: 18px;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+.poi.open .poi-chev {
+  transform: rotate(90deg);
+  color: var(--dorado);
+}
+.poi-body {
+  padding: 0 12px 12px;
+  display: none;
+  font-size: 13px;
+  line-height: 1.55;
+}
+.poi.open .poi-body { display: block; }
+.poi-photo {
+  margin: 0 -12px 10px;
+  background: #eee;
+}
+.poi-photo img {
+  width: 100%;
+  display: block;
+  max-height: 220px;
+  object-fit: cover;
+}
+.poi-photo-credit {
+  font-size: 10px;
+  color: var(--texto-disabled);
+  text-align: right;
+  padding: 2px 12px;
+  background: #fafafa;
+}
+.poi-fields {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 4px 10px;
+  margin: 0 0 10px;
+  font-size: 12px;
+}
+.poi-fields dt {
+  color: var(--verde-oscuro);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 10px;
+  padding-top: 2px;
+}
+.poi-fields dd {
+  margin: 0;
+  color: var(--texto);
+}
+.poi-desc { margin-bottom: 10px; }
+.poi-desc p { margin-bottom: 8px; }
+.poi-desc p:last-child { margin-bottom: 0; }
+.btn-maps {
+  display: block;
+  background: var(--verde-claro);
+  color: var(--verde-oscuro);
+  padding: 10px 12px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 13px;
+  text-decoration: none;
+  border: 1px solid var(--verde-medio);
+}
+.btn-maps:active { background: var(--verde-medio); color: white; }
