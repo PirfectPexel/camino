@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#2c5f3d">
+  <title>Etapa 1 · Tui → O Porriño · Camino Portugués</title>
+  <link rel="manifest" href="/camino/manifest.json">
+  <link rel="stylesheet" href="/camino/css/style.css">
+  <link rel="stylesheet" href="/camino/leaflet/leaflet.css">
+  <link rel="icon" type="image/png" sizes="192x192" href="/camino/icons/icon-192.png">
+</head>
+<body>
+  <header class="topbar">
+    <a href="/camino/etapas.html" class="back" aria-label="Volver">←</a>
+    <div class="title">Etapa 1 · Tui → O Porriño</div>
+  </header>
+
+  <section class="hero">
+    <span class="badge">ETAPA 1</span>
+    <h1>Tui → O Porriño</h1>
+    <div class="meta">16 km · Domingo 17 mayo · Salida ~9:00</div>
+  </section>
+
+  <div class="accordion">
+
+    <!-- 1. Resumen -->
+    <article class="acc-item" id="resumen">
+      <button class="acc-head">
+        <span><span class="ic">📋</span>Resumen</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <table>
+          <tbody>
+            <tr><th>Distancia</th><td>16 km</td></tr>
+            <tr><th>Hora salida recomendada</th><td>9:00</td></tr>
+            <tr><th>Tiempo estimado</th><td>4h00 (a 4–4,5 km/h con paradas cada 5–6 km)</td></tr>
+            <tr><th>Dificultad</th><td>Llana</td></tr>
+            <tr><th>Aviso rodillas</th><td>Etapa de adaptación. Tras la Ponte das Febres tramo de bosque agradable. Sin desniveles importantes.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <!-- 2. Antes de salir -->
+    <article class="acc-item" id="antes">
+      <button class="acc-head">
+        <span><span class="ic">🥾</span>Antes de salir</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <p>Ya lo habrás visto el sábado por la tarde. Si te quedó algo pendiente, la catedral y la Casa de Salomón en el barrio judío merecen otra visita rápida por la mañana.</p>
+      </div>
+    </article>
+
+    <!-- 3. Durante la etapa -->
+    <article class="acc-item" id="durante">
+      <button class="acc-head">
+        <span><span class="ic">🛤</span>Durante la etapa</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <div class="mapa" id="mapa-1" data-etapa="1"></div>
+        <ul>
+          <li><strong>Capilla da Virxe do Camiño</strong> — Pequeña ermita a la salida de Tui dedicada a la Virgen del Camino. Primera parada jacobea.</li>
+          <li><strong>Puente de San Telmo (o Ponte das Febres)</strong> — Uno de los monumentos más reconocidos del Camino Portugués. Puente de un solo arco de sillares de piedra, datado en el siglo XII. La historia es conmovedora: en abril de 1251, San Pedro González Telmo peregrinaba a Santiago gravemente enfermo. En realidad, ya sabía que iba a morir — había pronosticado su propia muerte mientras predicaba en la catedral de Tui — y quería llegar a la tumba del Apóstol para morir allí. Al cruzar este puente le atacaron las fiebres y tuvo que dar la vuelta. Murió en Tui poco después. De ahí el nombre "das Febres" (de las fiebres).
+            <br><br>Junto al puente hay una cruz de piedra y un monolito con la inscripción: <em>"Caminante, aquí enfermó de muerte San Telmo en abril de 1251. Pídele que hable con Dios a favor tuyo."</em> El puente conserva <strong>roderas de hasta 20 cm de profundidad</strong>, huellas del paso de carros durante siglos, restauradas por su valor histórico. También se ven numerosas marcas de cantería medievales en los sillares.
+            <br><br>Dato curioso: además de predicador, San Telmo se dedicaba a reparar puentes. Se le atribuyen los de Castrelo (Ribadavia) y A Ramallosa (Baiona).</li>
+          <li><strong>Bosque de A Ribeira</strong> — Tras el puente, un tramo por bosque denso y frondoso. Muy agradable.</li>
+          <li><strong>A Magdalena</strong> — Pequeño pueblo al salir del bosque.</li>
+          <li><strong>Orbenlle</strong> — Núcleo rural con el Puente de la Magdalena (o de Orbenlle), estructura de piedra peatonal sobre el río Louro. Lo cruzan cientos de peregrinos.</li>
+        </ul>
+        <h4>Bares y servicios en ruta</h4>
+        <table>
+          <thead>
+            <tr><th>Km</th><th>Lugar</th><th>Servicios</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>~5</td><td>Ribadelouro</td><td>Fuente y bancos</td></tr>
+            <tr><td>~8</td><td>A Magdalena</td><td>Pequeño núcleo, posible bar</td></tr>
+            <tr><td>~11</td><td>Orbenlle</td><td>Bar</td></tr>
+            <tr><td>16</td><td>O Porriño</td><td>Todos los servicios al llegar</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <!-- 4. Al llegar a O Porriño -->
+    <article class="acc-item" id="llegar">
+      <button class="acc-head">
+        <span><span class="ic">🏛</span>Al llegar a O Porriño</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <p>O Porriño es, ante todo, la cuna de <strong>Antonio Palacios</strong> (1874–1936), el arquitecto que diseñó el Palacio de Comunicaciones de Madrid (el edificio de Cibeles, hoy sede del Ayuntamiento de Madrid). Palacios nació aquí y, a pesar de su fama y prestigio, las cuatro obras que hizo para su pueblo las hizo <strong>completamente gratis</strong>. Todo lo que vas a ver de Palacios en O Porriño fue un regalo a su tierra.</p>
+      </div>
+    </article>
+
+    <!-- 5. Qué ver -->
+    <article class="acc-item" id="ver">
+      <button class="acc-head">
+        <span><span class="ic">👁</span>Qué ver</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <div class="item">
+          <div class="name">Ayuntamiento</div>
+          <div class="det">Diseñado por Palacios. Edificio modernista de 1924 que sorprende en un pueblo pequeño. Es uno de sus regalos al pueblo.</div>
+        </div>
+        <div class="item">
+          <div class="name">Fuente de la Praza do Cristo</div>
+          <div class="det">La primera obra de Palacios para Galicia (1904), también gratis. Las cerámicas son de Daniel Zuloaga, uno de los principales ceramistas de España. Un pequeño monumento que esconde firma de artista grande.</div>
+        </div>
+        <div class="item">
+          <div class="name">Templete de San Luis</div>
+          <div class="det">El POI más sorprendente de O Porriño, y probablemente el más insólito del Camino Portugués. Lo que ves no es una réplica: es la boca de metro original de la estación Red de San Luis (lo que hoy es Gran Vía) de Madrid. Diseñada por Palacios, funcionó en Madrid desde 1919 hasta 1970. Cuando la estación se reformó en 1970, el templete fue desmontado pieza a pieza y trasladado a O Porriño en 1971, donde se reconstruyó como monumento. Es la única boca de metro de toda Galicia. En 2021, Madrid inauguró una réplica en la Gran Vía usando granito rosa de O Porriño — el círculo se cerró.</div>
+        </div>
+        <div class="item">
+          <div class="name">Botica Nova</div>
+          <div class="det">Farmacia modernista de 1912, diseñada por Palacios para su hermano José, que era farmacéutico. Aquí se celebraban tertulias literarias. En los años 30 la regentó la primera mujer farmacéutica de O Porriño.</div>
+        </div>
+        <div class="item">
+          <div class="name">Iglesia de Santa María</div>
+          <div class="det">Dedicada a la Purísima Concepción, en el centro del pueblo.</div>
+        </div>
+        <div class="item">
+          <div class="name">Capilla de San Benito</div>
+          <div class="det">Barroca, sencilla, con fachada de bloques de piedra.</div>
+        </div>
+        <div class="item">
+          <div class="name">Gándaras de Budiño</div>
+          <div class="det">Humedal protegido (Zona de Especial Protección). Alberga la última población de galápago europeo en España, con apenas 90 ejemplares. También viven aquí 11 de las 14 especies de anfibios de Galicia. Bajo el humedal hay un yacimiento prehistórico datado entre 18.000 y 26.000 a.C. Están a 3,5 km extra (terreno llano con pasarelas), solo si te sobran fuerzas.</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 6. Curiosidades de O Porriño -->
+    <article class="acc-item" id="curiosidades">
+      <button class="acc-head">
+        <span><span class="ic">✨</span>Curiosidades de O Porriño</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <ul>
+          <li><strong>Granito rosa:</strong> Las canteras de O Porriño son las <strong>mayores del mundo</strong> de este tipo de granito. Se exporta a Nueva York y Japón.</li>
+          <li><strong>Festival de Cans:</strong> Parodia gallega del Festival de Cannes (Cans es una parroquia del municipio). Cine, humor y mucho cachondeo rural.</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 7. Gastronomía típica -->
+    <article class="acc-item" id="gastronomia">
+      <button class="acc-head">
+        <span><span class="ic">🍴</span>Gastronomía típica</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <ul>
+          <li><strong>Cocido gallego</strong> — Plato contundente de la zona interior.</li>
+          <li><strong>Pan de maíz (broa)</strong> — Tradición compartida con el norte de Portugal.</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 8. Ruta recomendada del pueblo -->
+    <article class="acc-item" id="ruta-pueblo">
+      <button class="acc-head">
+        <span><span class="ic">📍</span>Ruta recomendada del pueblo</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <p>~1,4 km sin Gándaras · ~1h con visitas</p>
+        <table>
+          <thead>
+            <tr><th>#</th><th>Punto</th><th>Desde anterior</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Capilla de San Benito (zona sur, entrada al pueblo)</td><td>—</td></tr>
+            <tr><td>2</td><td>Iglesia de Santa María</td><td>~400 m</td></tr>
+            <tr><td>3</td><td>Fuente de la Praza do Cristo</td><td>~150 m</td></tr>
+            <tr><td>4</td><td>Botica Nova</td><td>~100 m</td></tr>
+            <tr><td>5</td><td>Ayuntamiento de Antonio Palacios</td><td>~150 m</td></tr>
+            <tr><td>6</td><td>Templete de San Luis</td><td>~250 m</td></tr>
+          </tbody>
+        </table>
+        <p>Los puntos 2 a 5 están en un radio de 200 m — es la zona de Antonio Palacios. Tu alojamiento (Malladoura Passive House) está en las afueras, así que visita todo el centro al llegar antes de ir al alojamiento, o sal a pasear después de dejar la mochila (está a unos 15–20 min del centro). Las Gándaras de Budiño están a 3,5 km extra (terreno llano con pasarelas), solo si te sobran fuerzas.</p>
+      </div>
+    </article>
+
+    <!-- 9. Dónde comer -->
+    <article class="acc-item" id="comer">
+      <button class="acc-head">
+        <span><span class="ic">🍽</span>Dónde comer</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <div class="item">
+          <div class="name">Casa Marisol</div>
+          <div class="det">Centro · Menú del día casero ~10 €</div>
+        </div>
+        <div class="item">
+          <div class="name">O Cruceiro</div>
+          <div class="det">Entrada del pueblo por el Camino · Menú peregrino ~10 €</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 10. Hotel de hoy -->
+    <article class="acc-item" id="hotel">
+      <button class="acc-head">
+        <span><span class="ic">🛏</span>Hotel de hoy</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <div class="item">
+          <div class="name">Malladoura Passive House</div>
+          <div class="det">O Porriño · 70 €</div>
+          <p style="margin-top:8px"><a href="https://www.booking.com/hotel/es/malladoura-passive-house.es.html?checkin=2026-05-17&checkout=2026-05-18&group_adults=1&no_rooms=1" target="_blank" rel="noopener">Ver en Booking →</a></p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 11. Fotografía y contemplación -->
+    <article class="acc-item" id="fotos">
+      <button class="acc-head">
+        <span><span class="ic">📸</span>Fotografía y contemplación</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <h4>Fotografía</h4>
+        <ul>
+          <li><strong>Viñedos en emparrado (km 3–6)</strong> — Las típicas viñas gallegas en alto, verdes en mayo. Mañana temprano, luz filtrada entre hojas. Busca hórreos entre los viñedos: la combinación hórreo + viñedo + camino de tierra es muy gallega.</li>
+          <li><strong>Iglesia de San Bartolomeu de Rebordáns</strong> — Románica del s. XI, a la salida de Tui. En el propio Camino.</li>
+          <li><strong>Ponte das Febres</strong> — Puente de piedra sobre arroyo en zona boscosa. Íntimo y fotogénico.</li>
+        </ul>
+        <h4>Contemplación</h4>
+        <ul>
+          <li><strong>Área de descanso de Ribadelouro (km ~5)</strong> — Fuente, bancos y sombra. Primer descanso natural.</li>
+          <li><strong>Ponte das Febres</strong> — Espacio para sentarse junto al agua en las rocas. Tranquilo y fresco.</li>
+          <li><strong>Parque Municipal de O Porriño</strong> — Bancos con sombra al llegar.</li>
+        </ul>
+      </div>
+    </article>
+
+  </div>
+
+  <button class="btn-primary" id="btn-toggle-completed" data-stage-id="1">
+    Marcar como completada
+  </button>
+
+  <script type="module" src="/camino/js/app.js"></script>
+  <script type="module" src="/camino/js/progress.js"></script>
+  <script src="/camino/leaflet/leaflet.js"></script>
+  <script type="module" src="/camino/js/map.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => navigator.serviceWorker.register('/camino/sw.js'));
+    }
+  </script>
+</body>
+</html>
