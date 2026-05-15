@@ -1,0 +1,41 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "etapa": 1, "nombre": "Tui → O Porriño" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-8.6435, 42.0463],
+          [-8.6412, 42.0521],
+          [-8.6388, 42.0580],
+          [-8.6370, 42.0648],
+          [-8.6345, 42.0712],
+          [-8.6318, 42.0775],
+          [-8.6295, 42.0843],
+          [-8.6278, 42.0912],
+          [-8.6260, 42.0981],
+          [-8.6247, 42.1054],
+          [-8.6235, 42.1128],
+          [-8.6225, 42.1202],
+          [-8.6215, 42.1275],
+          [-8.6205, 42.1348],
+          [-8.6198, 42.1420],
+          [-8.6192, 42.1480],
+          [-8.6189, 42.1597]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "tipo": "inicio", "nombre": "Tui" },
+      "geometry": { "type": "Point", "coordinates": [-8.6435, 42.0463] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "tipo": "fin", "nombre": "O Porriño" },
+      "geometry": { "type": "Point", "coordinates": [-8.6189, 42.1597] }
+    }
+  ]
+}

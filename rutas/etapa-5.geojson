@@ -1,0 +1,41 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "etapa": 5, "nombre": "Caldas de Reis → Padrón" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-8.6418, 42.6045],
+          [-8.6425, 42.6118],
+          [-8.6435, 42.6192],
+          [-8.6448, 42.6268],
+          [-8.6462, 42.6345],
+          [-8.6478, 42.6422],
+          [-8.6495, 42.6498],
+          [-8.6510, 42.6572],
+          [-8.6525, 42.6648],
+          [-8.6538, 42.6722],
+          [-8.6548, 42.6798],
+          [-8.6548, 42.6875],
+          [-8.6545, 42.6945],
+          [-8.6543, 42.7187],
+          [-8.6535, 42.7258],
+          [-8.6618, 42.7325],
+          [-8.6603, 42.7385]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "tipo": "inicio", "nombre": "Caldas de Reis" },
+      "geometry": { "type": "Point", "coordinates": [-8.6418, 42.6045] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "tipo": "fin", "nombre": "Padrón" },
+      "geometry": { "type": "Point", "coordinates": [-8.6603, 42.7385] }
+    }
+  ]
+}

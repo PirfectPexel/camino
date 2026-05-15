@@ -1,0 +1,43 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "etapa": 3, "nombre": "Redondela → Pontevedra" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-8.6092, 42.2826],
+          [-8.6050, 42.2898],
+          [-8.6005, 42.2972],
+          [-8.5955, 42.3048],
+          [-8.5905, 42.3118],
+          [-8.5855, 42.3188],
+          [-8.5812, 42.3265],
+          [-8.5808, 42.3437],
+          [-8.5820, 42.3510],
+          [-8.5845, 42.3570],
+          [-8.5998, 42.3625],
+          [-8.6048, 42.3637],
+          [-8.6098, 42.3720],
+          [-8.6155, 42.3825],
+          [-8.6235, 42.3940],
+          [-8.6320, 42.4060],
+          [-8.6410, 42.4175],
+          [-8.6465, 42.4258],
+          [-8.6485, 42.4333]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "tipo": "inicio", "nombre": "Redondela" },
+      "geometry": { "type": "Point", "coordinates": [-8.6092, 42.2826] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "tipo": "fin", "nombre": "Pontevedra" },
+      "geometry": { "type": "Point", "coordinates": [-8.6485, 42.4333] }
+    }
+  ]
+}

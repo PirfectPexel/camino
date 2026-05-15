@@ -1,0 +1,46 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "etapa": 6, "nombre": "Padrón → Santiago de Compostela" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-8.6603, 42.7385],
+          [-8.6572, 42.7458],
+          [-8.6535, 42.7535],
+          [-8.6495, 42.7615],
+          [-8.6452, 42.7698],
+          [-8.6405, 42.7782],
+          [-8.6355, 42.7868],
+          [-8.6298, 42.7952],
+          [-8.6238, 42.8038],
+          [-8.6175, 42.8118],
+          [-8.6112, 42.8195],
+          [-8.6048, 42.8268],
+          [-8.5978, 42.8335],
+          [-8.5905, 42.8395],
+          [-8.5820, 42.8452],
+          [-8.5750, 42.8550],
+          [-8.5695, 42.8618],
+          [-8.5628, 42.8672],
+          [-8.5560, 42.8718],
+          [-8.5510, 42.8758],
+          [-8.5468, 42.8795],
+          [-8.5446, 42.8806]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "tipo": "inicio", "nombre": "Padrón" },
+      "geometry": { "type": "Point", "coordinates": [-8.6603, 42.7385] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "tipo": "fin", "nombre": "Santiago de Compostela" },
+      "geometry": { "type": "Point", "coordinates": [-8.5446, 42.8806] }
+    }
+  ]
+}

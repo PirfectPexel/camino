@@ -1,0 +1,43 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "etapa": 4, "nombre": "Pontevedra → Caldas de Reis" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-8.6485, 42.4333],
+          [-8.6510, 42.4405],
+          [-8.6515, 42.4478],
+          [-8.6512, 42.4550],
+          [-8.6510, 42.4685],
+          [-8.6498, 42.4762],
+          [-8.6482, 42.4840],
+          [-8.6465, 42.4918],
+          [-8.6448, 42.4998],
+          [-8.6428, 42.5078],
+          [-8.6408, 42.5158],
+          [-8.6392, 42.5238],
+          [-8.6388, 42.5345],
+          [-8.6382, 42.5428],
+          [-8.6372, 42.5512],
+          [-8.6358, 42.5598],
+          [-8.6342, 42.5672],
+          [-8.6332, 42.5752],
+          [-8.6418, 42.6045]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "tipo": "inicio", "nombre": "Pontevedra" },
+      "geometry": { "type": "Point", "coordinates": [-8.6485, 42.4333] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "tipo": "fin", "nombre": "Caldas de Reis" },
+      "geometry": { "type": "Point", "coordinates": [-8.6418, 42.6045] }
+    }
+  ]
+}

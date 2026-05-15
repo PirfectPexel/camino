@@ -1,0 +1,41 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "etapa": 2, "nombre": "O Porriño → Redondela" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-8.6189, 42.1597],
+          [-8.6205, 42.1648],
+          [-8.6218, 42.1710],
+          [-8.6228, 42.1775],
+          [-8.6232, 42.1840],
+          [-8.6228, 42.1905],
+          [-8.6220, 42.2002],
+          [-8.6215, 42.2075],
+          [-8.6208, 42.2148],
+          [-8.6195, 42.2220],
+          [-8.6178, 42.2295],
+          [-8.6158, 42.2368],
+          [-8.6138, 42.2435],
+          [-8.6120, 42.2510],
+          [-8.6105, 42.2580],
+          [-8.6095, 42.2650],
+          [-8.6092, 42.2826]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "tipo": "inicio", "nombre": "O Porriño" },
+      "geometry": { "type": "Point", "coordinates": [-8.6189, 42.1597] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "tipo": "fin", "nombre": "Redondela" },
+      "geometry": { "type": "Point", "coordinates": [-8.6092, 42.2826] }
+    }
+  ]
+}
