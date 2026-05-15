@@ -14,7 +14,7 @@ window.initMapa = async function initMapa(mapaEl) {
   // Tile layer apuntando a tiles locales precargados
   L.tileLayer('/camino/tiles/{z}/{x}/{y}.png', {
     minZoom: 11,
-    maxZoom: 15,
+    maxZoom: 14,
     attribution: '© OpenStreetMap',
     errorTileUrl: '/camino/leaflet/images/marker-shadow.png'
   }).addTo(map);
