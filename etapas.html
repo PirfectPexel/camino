@@ -111,8 +111,11 @@
       const subList = s.pueblos.map((p, i) => {
         const num = `${s.id}.${i + 1}`;
         const destinoBadge = p.destino ? ' <span style="color:#c89a3c;font-size:10px;font-weight:700">· DESTINO</span>' : '';
+        const href = p.destino
+          ? `/camino/etapa-${s.id}.html#${p.ancla}`
+          : `/camino/${p.ancla}.html`;
         return `
-          <a href="/camino/etapa-${s.id}.html#${p.ancla}" class="t-pueblo${p.destino ? ' destino' : ''}">
+          <a href="${href}" class="t-pueblo${p.destino ? ' destino' : ''}">
             <span class="t-pueblo-num">${num}</span>${p.name}${destinoBadge}
           </a>
         `;

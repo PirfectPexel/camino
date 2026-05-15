@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#2c5f3d">
+  <title>Carracedo · Etapa 5 · Camino Portugués</title>
+  <link rel="manifest" href="/camino/manifest.json">
+  <link rel="stylesheet" href="/camino/css/style.css">
+  <link rel="icon" type="image/png" sizes="192x192" href="/camino/icons/icon-192.png">
+</head>
+<body>
+  <header class="topbar">
+    <a href="/camino/etapas.html" class="back" aria-label="Volver">←</a>
+    <div class="title">🏘 Carracedo</div>
+  </header>
+
+  <section class="hero">
+    <span class="badge">ETAPA 5 · PUEBLO INTERMEDIO</span>
+    <h1>Carracedo</h1>
+    <div class="meta">Entre Caldas de Reis y Pontecesures · etapa 5</div>
+  </section>
+
+  <div class="accordion">
+
+    <article class="acc-item" id="contexto">
+      <button class="acc-head"><span><span class="ic">🏛</span>Contexto</span><span class="chev">›</span></button>
+      <div class="acc-body">
+        <p>Carracedo es una parroquia rural a mitad de camino entre Caldas y Padrón, envuelta en el paisaje característico de esta zona de Galicia: robledales, fincas de labor y algún que otro hórreo asomando entre las casas de piedra. No tiene grandes atractivos ni servicios destacados, pero el camino por aquí es agradable y tranquilo — uno de esos tramos en los que el Camino simplemente es Camino.</p>
+      </div>
+    </article>
+
+    <article class="acc-item" id="ver">
+      <button class="acc-head"><span><span class="ic">👁</span>Qué ver</span><span class="chev">›</span></button>
+      <div class="acc-body">
+        <div class="item">
+          <div class="name">Iglesia de Santa Mariña de Carracedo</div>
+          <div class="det">Iglesia parroquial de piedra en el centro de la parroquia.</div>
+        </div>
+        <p>Una iglesia rural gallega sencilla, con su atrio y cruceiro. La advocación a Santa Mariña la vincula con otras parroquias de la zona que siguen el calendario litúrgico romano-galaico más antiguo. El entorno arbolado del atrio es agradable para una pausa breve.</p>
+      </div>
+    </article>
+
+    <article class="acc-item" id="curiosidades">
+      <button class="acc-head"><span><span class="ic">✨</span>Curiosidades</span><span class="chev">›</span></button>
+      <div class="acc-body">
+        <p>El topónimo "Carracedo" aparece en varios puntos de Galicia y puede derivar de "carrasco" (encina) o de un topónimo prerromano relacionado con el terreno. Esta zona formaba parte del territorio de la antigua ciudad romana de Aquis Celenis (Caldas de Reis) y más tarde del alfoz medieval de la diócesis de Santiago.</p>
+      </div>
+    </article>
+
+    <article class="acc-item" id="parar">
+      <button class="acc-head"><span><span class="ic">🍴</span>Dónde parar</span><span class="chev">›</span></button>
+      <div class="acc-body">
+        <p>Sin instalaciones específicas para peregrinos. Si llevas agua y algo de comer, el atrio de la iglesia o algún banco del camino son la parada más razonable. Pontecesures, con bares y servicios completos, está a unos 6-7 km — es la parada principal del día.</p>
+      </div>
+    </article>
+
+  </div>
+
+  <a href="/camino/etapa-5.html" class="btn-primary" style="background:var(--verde-claro);color:var(--verde-oscuro);text-decoration:none;text-align:center">
+    ← Volver a etapa 5
+  </a>
+
+  <script type="module" src="/camino/js/app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => navigator.serviceWorker.register('/camino/sw.js'));
+    }
+  </script>
+</body>
+</html>

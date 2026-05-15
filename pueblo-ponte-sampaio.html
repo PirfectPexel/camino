@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#2c5f3d">
+  <title>Ponte Sampaio · Etapa 3 · Camino Portugués</title>
+  <link rel="manifest" href="/camino/manifest.json">
+  <link rel="stylesheet" href="/camino/css/style.css">
+  <link rel="icon" type="image/png" sizes="192x192" href="/camino/icons/icon-192.png">
+</head>
+<body>
+  <header class="topbar">
+    <a href="/camino/etapas.html" class="back" aria-label="Volver">←</a>
+    <div class="title">🏘 Ponte Sampaio</div>
+  </header>
+
+  <section class="hero">
+    <span class="badge">ETAPA 3 · PUEBLO INTERMEDIO</span>
+    <h1>Ponte Sampaio</h1>
+    <div class="meta">Entre Arcade y Pontevedra · etapa 3</div>
+  </section>
+
+  <div class="accordion">
+
+    <article class="acc-item" id="contexto">
+      <button class="acc-head"><span><span class="ic">🏛</span>Contexto</span><span class="chev">›</span></button>
+      <div class="acc-body">
+        <p>Ponte Sampaio está a apenas unos centenares de metros después de Arcade — apenas te habrás recuperado del café cuando ya has llegado. Es un pueblo pequeño y tranquilo cuya relevancia histórica es desproporcionada con su tamaño: aquí, entre el 7 y el 9 de junio de 1809, tuvo lugar una batalla que cambió el curso de la Guerra de la Independencia en Galicia y determinó la retirada definitiva del ejército napoleónico de la región.</p>
+      </div>
+    </article>
+
+    <article class="acc-item" id="ver">
+      <button class="acc-head"><span><span class="ic">👁</span>Qué ver</span><span class="chev">›</span></button>
+      <div class="acc-body">
+        <div class="item">
+          <div class="name">Puente medieval de Ponte Sampaio</div>
+          <div class="det">Puente de piedra sobre el río Verdugo. El elemento central del pueblo y de la batalla histórica.</div>
+        </div>
+        <p>Los arcos de piedra medieval sobre el Verdugo son lo más fotogénico de la etapa. El puente no es solo un cruce: fue el punto de defensa que determinó el resultado de la batalla. Los guerrilleros gallegos destruyeron parte del puente para impedir el avance francés, usando el río como barrera natural.</p>
+        <div class="item">
+          <div class="name">Monumento a la Batalla de Ponte Sampaio</div>
+          <div class="det">Conmemora la derrota de las tropas del Mariscal Ney el 7-9 de junio de 1809.</div>
+        </div>
+        <p>El escenario: 6.000 guerrilleros gallegos, muchos sin formación militar, se enfrentaron a 8.000 soldados curtidos del Mariscal Michel Ney. Construyeron cañones de madera con troncos de roble ahuecados y aros de hierro. Pablo Morillo ("El León de Sampaio") dirigió una defensa tan efectiva que Ney convocó consejo de oficiales y ordenó la retirada. Un ejército que había cruzado media Europa abandonaba Galicia ante campesinos armados con cañones improvisados.</p>
+        <div class="item">
+          <div class="name">Capela de Santa Marta</div>
+          <div class="det">Pequeña capilla en el núcleo del pueblo.</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="acc-item" id="curiosidades">
+      <button class="acc-head"><span><span class="ic">✨</span>Curiosidades</span><span class="chev">›</span></button>
+      <div class="acc-body">
+        <p>La batalla de Ponte Sampaio es uno de los episodios más notables de la resistencia española contra Napoleón y, sin embargo, es prácticamente desconocida fuera de Galicia. La combinación de guerrilla, geografía y los "cañóns de pau" (cañones de madera) convirtió esta batalla en un modelo de resistencia asimétrica estudiado posteriormente. La evacuación definitiva de Galicia por parte del ejército imperial comenzó aquí.</p>
+      </div>
+    </article>
+
+    <article class="acc-item" id="parar">
+      <button class="acc-head"><span><span class="ic">🍴</span>Dónde parar</span><span class="chev">›</span></button>
+      <div class="acc-body">
+        <p>Hay un bar junto al puente — una parada breve si llevas buen ritmo, o un descanso más largo si quieres explorar el monumento y el puente. La etapa aún tiene unos 13 km hasta Pontevedra, así que no te detengas demasiado.</p>
+      </div>
+    </article>
+
+    <article class="acc-item" id="fotos">
+      <button class="acc-head"><span><span class="ic">📸</span>Fotografía</span><span class="chev">›</span></button>
+      <div class="acc-body">
+        <p>El puente medieval es el mejor encuadre de Ponte Sampaio. Desde la orilla del Verdugo, aguas abajo, con los arcos en perspectiva y la vegetación de la ribera. En días claros, el agua verde del río contrasta con el granito gris del puente.</p>
+      </div>
+    </article>
+
+  </div>
+
+  <a href="/camino/etapa-3.html" class="btn-primary" style="background:var(--verde-claro);color:var(--verde-oscuro);text-decoration:none;text-align:center">
+    ← Volver a etapa 3
+  </a>
+
+  <script type="module" src="/camino/js/app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => navigator.serviceWorker.register('/camino/sw.js'));
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#2c5f3d">
+  <title>Arcade · Etapa 3 · Camino Portugués</title>
+  <link rel="manifest" href="/camino/manifest.json">
+  <link rel="stylesheet" href="/camino/css/style.css">
+  <link rel="icon" type="image/png" sizes="192x192" href="/camino/icons/icon-192.png">
+</head>
+<body>
+  <header class="topbar">
+    <a href="/camino/etapas.html" class="back" aria-label="Volver">←</a>
+    <div class="title">🏘 Arcade</div>
+  </header>
+
+  <section class="hero">
+    <span class="badge">ETAPA 3 · PUEBLO INTERMEDIO</span>
+    <h1>Arcade</h1>
+    <div class="meta">Entre Cesantes y Ponte Sampaio · etapa 3</div>
+  </section>
+
+  <div class="accordion">
+
+    <article class="acc-item" id="contexto">
+      <button class="acc-head"><span><span class="ic">🏛</span>Contexto</span><span class="chev">›</span></button>
+      <div class="acc-body">
+        <p>Arcade es el pueblo de referencia de esta etapa. Llega al km 5, en el momento perfecto para la primera parada seria del día. Es un pueblo conocido en toda Galicia y más allá por una sola cosa: las ostras. La calidad de las ostras de Arcade tiene raíces en la biología de la ría: el agua fría y rica en fitoplancton del estuario del Verdugo crea condiciones ideales para el molusco. La producción local es pequeña y artesanal, lo que explica que el producto sea fresco y esté disponible todo el año en los establecimientos locales.</p>
+        <p>El primer fin de semana de abril se celebra aquí la Fiesta de la Ostra, la más grande de Galicia dedicada a este marisco, con más de 25.000 visitantes. Aunque en mayo ya ha pasado la fiesta, los bares y ostrerías siguen sirviendo ostras frescas durante toda la temporada.</p>
+      </div>
+    </article>
+
+    <article class="acc-item" id="ver">
+      <button class="acc-head"><span><span class="ic">👁</span>Qué ver</span><span class="chev">›</span></button>
+      <div class="acc-body">
+        <div class="item">
+          <div class="name">Iglesia de Santiago de Arcade</div>
+          <div class="det">Iglesia parroquial dedicada al Apóstol, en el centro del pueblo.</div>
+        </div>
+        <p>Una advocación a Santiago en el Camino de Santiago. La iglesia es de tipo rural gallego, con fachada de piedra y atrio con cruceiro. Nada extraordinario en lo arquitectónico, pero el nombre lo dice todo: llevas días caminando hacia una catedral dedicada a este santo y aquí hay una parroquia que lleva su nombre desde hace siglos.</p>
+        <div class="item">
+          <div class="name">Ponte Vella de Arcade</div>
+          <div class="det">Puente medieval sobre el río Verdugo, en el límite con Ponte Sampaio.</div>
+        </div>
+        <p>Un puente de arcos de piedra que marca la transición entre Arcade y Ponte Sampaio. El río Verdugo baja aquí con caudal y el reflejo de los arcos en el agua es uno de los mejores encuadres fotográficos de la etapa, especialmente en horas de la mañana.</p>
+        <div class="item">
+          <div class="name">Ostrerías — donde comer ostras</div>
+          <div class="det">O Loureiro, Casa Aurora, A Ostra Bar: establecimientos especializados en ostras frescas de la ría.</div>
+        </div>
+        <p>La forma clásica de comerlas en Arcade: media docena con limón y pan, recién abiertas. Es una parada gastronómica que no tiene equivalente en el resto de la ruta.</p>
+      </div>
+    </article>
+
+    <article class="acc-item" id="curiosidades">
+      <button class="acc-head"><span><span class="ic">✨</span>Curiosidades</span><span class="chev">›</span></button>
+      <div class="acc-body">
+        <p>La ostra de Arcade ya era apreciada en la antigüedad romana — hay referencias a la exportación de ostras gallegas a Roma. Durante siglos, la corte de Madrid recibía ostras de Arcade en escabeche, que eran la única forma de conservarlas sin refrigeración para el largo viaje. La producción actual es artesanal y local: cada ostra que comes aquí viene de bateas de la propia ría.</p>
+      </div>
+    </article>
+
+    <article class="acc-item" id="parar">
+      <button class="acc-head"><span><span class="ic">🍴</span>Dónde parar</span><span class="chev">›</span></button>
+      <div class="acc-body">
+        <p>Esta es la parada principal de la etapa. Con salida a las 9:00 llegas sobre las 10:15-10:30 — hora perfecta para un descanso completo. Si quieres ostras, pide media docena: es suficiente como aperitivo de media mañana y no cuesta más de 6-8 €. Lleva bastones al mínimo porque justo después de Arcade empieza el tramo hasta Ponte Sampaio, corto pero con piedras.</p>
+      </div>
+    </article>
+
+    <article class="acc-item" id="fotos">
+      <button class="acc-head"><span><span class="ic">📸</span>Fotografía</span><span class="chev">›</span></button>
+      <div class="acc-body">
+        <p>La Ponte Vella al cruzar hacia Ponte Sampaio, con el río Verdugo bajo los arcos. Mejor con luz de mañana (antes de las 11:00), orientada hacia el este. Desde la orilla, encuadrando los arcos con el agua en primer plano.</p>
+      </div>
+    </article>
+
+  </div>
+
+  <a href="/camino/etapa-3.html" class="btn-primary" style="background:var(--verde-claro);color:var(--verde-oscuro);text-decoration:none;text-align:center">
+    ← Volver a etapa 3
+  </a>
+
+  <script type="module" src="/camino/js/app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => navigator.serviceWorker.register('/camino/sw.js'));
+    }
+  </script>
+</body>
+</html>

@@ -40,7 +40,7 @@ window.initMapa = async function initMapa(mapaEl) {
         const nombre = feat.properties.nombre || '';
         const ancla = feat.properties.ancla;  // opcional: id del sub-acordeón
         const popup = ancla
-          ? `<strong>${nombre}</strong><br><a href="#${ancla}" onclick="document.getElementById('${ancla}')?.classList.add('open');document.getElementById('${ancla}')?.scrollIntoView({behavior:'smooth'})">Ver detalles ↓</a>`
+          ? `<strong>${nombre}</strong><br><a href="/camino/${ancla}.html">Ver pueblo →</a>`
           : `<strong>${nombre}</strong>`;
         return L.circleMarker(latlng, {
           radius, fillColor: color, color: '#fff',
