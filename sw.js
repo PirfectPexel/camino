@@ -2,7 +2,7 @@
 // Estrategia: cache-first con fallback a red.
 // IMPORTANTE: bumpear CACHE_VERSION cada vez que cambies contenido para forzar update.
 
-const CACHE_VERSION = 'camino-v6';
+const CACHE_VERSION = 'camino-v7';
 const SCOPE = '/camino';
 
 const PRECACHE_URLS = [
