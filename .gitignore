@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Visual companion artifacts (brainstorming)
+.superpowers/
+
+# PDFs personales (billetes de tren - fuera de la web por decisión de spec)
+*.pdf
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Node (por si en algún momento se añade)
+node_modules/
+npm-debug.log*
+
+# Tiles temporales durante descarga
+tiles/.tmp/
