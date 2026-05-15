@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#2c5f3d">
+  <title>Etapa 5 · Caldas → Padrón · Camino Portugués</title>
+  <link rel="manifest" href="/camino/manifest.json">
+  <link rel="stylesheet" href="/camino/css/style.css">
+  <link rel="stylesheet" href="/camino/leaflet/leaflet.css">
+  <link rel="icon" type="image/png" sizes="192x192" href="/camino/icons/icon-192.png">
+</head>
+<body>
+  <header class="topbar">
+    <a href="/camino/etapas.html" class="back" aria-label="Volver">←</a>
+    <div class="title">Etapa 5 · Caldas → Padrón</div>
+  </header>
+
+  <section class="hero">
+    <span class="badge">ETAPA 5</span>
+    <h1>Caldas → Padrón</h1>
+    <div class="meta">19 km · Jueves 21 mayo · Salida ~9:00</div>
+  </section>
+
+  <div class="accordion">
+
+    <!-- 1. Resumen -->
+    <article class="acc-item" id="resumen">
+      <button class="acc-head">
+        <span><span class="ic">📋</span>Resumen</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <table>
+          <tbody>
+            <tr><th>Distancia</th><td>19 km</td></tr>
+            <tr><th>Hora salida recomendada</th><td>9:00</td></tr>
+            <tr><th>Tiempo estimado</th><td>5h00 (a 4-4,5 km/h con paradas cada 5-6 km)</td></tr>
+            <tr><th>Dificultad</th><td>Llana</td></tr>
+            <tr><th>Aviso rodillas</th><td>Tramo cómodo. Ligera bajada al cruzar el río Ulla en Pontecesures. Si las rodillas vienen cargadas del día anterior, hidrátalas antes (las termas de Caldas ayudan).</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <!-- 2. Antes de salir -->
+    <article class="acc-item" id="antes">
+      <button class="acc-head">
+        <span><span class="ic">🥾</span>Antes de salir</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <p>Un paseo por el Puente de Bermaña y la Fuente de las Burgas al amanecer es una despedida bonita de la villa termal.</p>
+      </div>
+    </article>
+
+    <!-- 3. Durante la etapa -->
+    <article class="acc-item" id="durante">
+      <button class="acc-head">
+        <span><span class="ic">🛤</span>Durante la etapa</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <div class="mapa" id="mapa-5" data-etapa="5"></div>
+        <ul>
+          <li><strong>Santa Marina de Carracedo</strong> — Complejo religioso a la salida de Caldas.</li>
+          <li><strong>Iglesia de San Miguel de Valga</strong> — Iglesia parroquial en el municipio de Valga.</li>
+          <li><strong>Molinos del río Valga</strong> — Molinos antiguos salpicados por el bosque a lo largo del río.</li>
+          <li><strong>Pontecesures</strong> — Pueblo histórico con mucho que ver:
+            <br><br><strong>Puente romano</strong> — Originalmente construido entre el 25 a.C. y el siglo I d.C., bajo el emperador Augusto. Su nombre se creía que venía de "Pons Caesaris" (Puente del César), pero es más probable que derive de "cessuris" (para los que pasan), porque el puente se usaba para realizar censos romanos. Era parte de la <strong>Vía XIX</strong> que unía Bracara Augusta (Braga) con Lucus Augusti (Lugo). Hoy se ven 12 arcos, pero originalmente el río Ulla era mucho más ancho y el puente era más largo. Fue modificado en 1911 y 1956.
+            <br><br><strong>Iglesia de San Julián</strong> — Templo barroco del siglo XVIII.
+            <br><br><strong>Mirador de Monte Salgueiras Lagoa</strong> — A unos 300 metros de altura, con vistas espectaculares de la confluencia de los ríos Ulla y Sar.</li>
+          <li><strong>Convento de Herbón</strong> — Convento franciscano del siglo XV, declarado Bien de Interés Cultural desde 2013. Aquí se cultivan los auténticos <strong>pimientos de Padrón</strong> (cuyo nombre correcto es "Pemento de Herbón", con Denominación de Origen Protegida desde 2009). La historia real: en el siglo XVII, frailes franciscanos regresaron de misiones en el estado mexicano de Tabasco trayendo semillas de pimiento. Las adaptaron al clima gallego y comenzaron un proceso de selección varietal. La semilla se trataba como bien parafernal (formaba parte de la dote matrimonial) y nunca salía de la zona de producción. <strong>Visitas guiadas:</strong> de abril a octubre, todos los días a las 18:00. Tel: 981 811 779.</li>
+        </ul>
+        <h4>Bares y servicios en ruta</h4>
+        <table>
+          <thead>
+            <tr><th>Km</th><th>Lugar</th><th>Servicios</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>~8</td><td>San Miguel de Valga</td><td>Bar pequeño</td></tr>
+            <tr><td>~13</td><td>Pontecesures</td><td>Varios bares al cruzar el puente, mejor sitio para almuerzo</td></tr>
+            <tr><td>~16</td><td>Herbón</td><td>Convento — café posible si visitas</td></tr>
+            <tr><td>19</td><td>Padrón</td><td>Todos los servicios al llegar</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <!-- 4. Al llegar a Padrón -->
+    <article class="acc-item" id="llegar">
+      <button class="acc-head">
+        <span><span class="ic">🏛</span>Al llegar a Padrón</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <p>Padrón es el primer gran escenario de la tradición jacobea, cuna de Rosalía de Castro y pueblo literario por excelencia. Su nombre viene directamente del "Pedrón", la piedra legendaria bajo el altar de su iglesia. Tiene unos 3.000 habitantes y está a 22 km de Santiago. "Quien va a Santiago y no va a Padrón, o hace romería o no" dice el refrán medieval.</p>
+      </div>
+    </article>
+
+    <!-- 5. Qué ver -->
+    <article class="acc-item" id="ver">
+      <button class="acc-head">
+        <span><span class="ic">👁</span>Qué ver</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <div class="item">
+          <div class="name">Iglesia de Santiago (y el Pedrón)</div>
+          <div class="det">Bajo el altar mayor se encuentra el "Pedrón": un miliario pétreo de origen romano dedicado a Neptuno donde, según la leyenda, se amarró la barca de piedra que trajo el cuerpo del Apóstol Santiago desde Palestina. Sus discípulos Teodoro y Atanasio navegaron desde Tierra Santa, cruzaron el Mediterráneo, subieron por el Atlántico, entraron por la Ría de Arousa, remontaron el río Ulla y atracaron aquí. Esta piedra da nombre al pueblo y es el símbolo fundacional de toda la tradición jacobea. Para verla se baja por una pequeña escalera detrás del frontal del altar. Curiosidad: cada 30 de diciembre se celebra aquí la ceremonia de la Traslación, documentada desde 1588. <strong>Horario:</strong> L-S 10:00-13:00 y 17:00-20:30; Dom y festivos solo 10:00-13:00. Entrada gratuita.</div>
+        </div>
+        <div class="item">
+          <div class="name">Fuente del Carmen (siglo XVI)</div>
+          <div class="det">Su origen data de 1577, aunque la versión actual fue reconstruida en 1789. Tres cuerpos de granito con imaginería religiosa: en el nicho superior, el Apóstol Santiago bautizando a la reina Lupa; en el centro, la llegada de la barca con el cuerpo del Apóstol; y en el nicho inferior, la Virgen de los Dolores. Los peregrinos paraban aquí a beber antes de continuar hacia la catedral. Está justo después de cruzar el puente de Santiago.</div>
+        </div>
+        <div class="item">
+          <div class="name">Monumento a Rosalía de Castro</div>
+          <div class="det">En el Paseo del Espolón, al norte. Rosalía de Castro (1837-1885) pasó sus últimos años de vida en Padrón y aquí escribió parte de su obra fundamental. Es la escritora nacional de Galicia y la figura central del "Rexurdimento" (renacimiento de la literatura en gallego). Su obra "Cantares Gallegos" (1863) fue tan importante que la fecha de su publicación, el 17 de mayo, se celebra cada año como el Día das Letras Galegas.</div>
+        </div>
+        <div class="item">
+          <div class="name">Monumento a Camilo José Cela</div>
+          <div class="det">En el mismo paseo, al sur. Cela nació en Iria Flavia (a 1 km de Padrón) en 1916. Premio Nobel de Literatura (1989), Premio Cervantes (1995). Pidió expresamente ser enterrado en el cementerio de Adina, al pie de un olivo centenario. La lápida es sencilla: solo su nombre y su título de Marqués de Iria Flavia.</div>
+        </div>
+        <div class="item">
+          <div class="name">Convento del Carmen</div>
+          <div class="det">Construido sobre roca granítica. Desde su atrio hay unas vistas preciosas del casco de Padrón y el valle del río. La Fuente del Carmen está justo delante.</div>
+        </div>
+        <div class="item">
+          <div class="name">Jardín botánico-artístico</div>
+          <div class="det">Declarado Bien de Interés Cultural en 1946. Es uno de los jardines más antiguos de España. Unas 300 especies en una hectárea, con varios árboles en el Registro Gallego de Árboles Singulares: palmera de Senegal, dos secuoyas rojas, un roble columnar y un castaño de Indias. Tiene el Monumento a Macías O Namorado (trovador medieval nacido en Padrón) y el "Banco de los Enamorados". <strong>Entrada gratuita.</strong></div>
+        </div>
+        <div class="item">
+          <div class="name">Confluencia de los ríos Sar y Ulla</div>
+          <div class="det">Fue la razón de ser de la ciudad en época romana: esta posición estratégica como puerto fluvial creó y desarrolló Iria Flavia. Curiosidad: 17 cruceiros de piedra en el fondo de la ría y en ambas orillas del Ulla marcan la ruta de la Traslatio, formando el <strong>único Vía Crucis fluvial-marítimo del mundo</strong>.</div>
+        </div>
+
+        <h4>POIs adicionales</h4>
+        <div class="item">
+          <div class="name">Colegiata de Santa María de Adina / Iria Flavia</div>
+          <div class="det">A 1 km del centro de Padrón (la verás al día siguiente al salir hacia Santiago). Construida en el siglo XII por el arzobispo Gelmírez sobre un templo romano del siglo I. Considerada el <strong>primer templo mariano del mundo</strong>. En su atrio está el <strong>Cementerio de Adina</strong>, celebrado por Rosalía de Castro en sus poemas. Aquí descansan los restos de Cela y aquí estuvo enterrada Rosalía antes de su traslado.</div>
+        </div>
+        <div class="item">
+          <div class="name">Casa Museo Rosalía de Castro</div>
+          <div class="det">En la aldea de A Matanza, a 2 km del centro. La casa donde vivió y murió la poetisa en 1885, convertida en museo en 1972. Objetos personales, mobiliario, primeras ediciones y el jardín que inspiró sus poemas. <strong>Horario:</strong> verano 10:00-14:00 y 16:00-20:00; resto del año 10:00-13:30 y 16:00-19:00; domingos solo mañana; cerrado lunes. <strong>Precio:</strong> 3 €. Tel: 981 811 204.</div>
+        </div>
+        <div class="item">
+          <div class="name">Fundación Camilo José Cela</div>
+          <div class="det">En Iria Flavia, frente a la Colegiata, en casas del siglo XVII. Contiene manuscritos, correspondencia, su biblioteca personal y una colección de arte con obras de Picasso y Miró. <strong>Horario:</strong> invierno L-V 10:00-14:00; verano M-S 10:00-14:00 y 16:30-20:00. Tel: 981 812 425.</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 6. Curiosidades de Padrón -->
+    <article class="acc-item" id="curiosidades">
+      <button class="acc-head">
+        <span><span class="ic">✨</span>Curiosidades de Padrón</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <ul>
+          <li><strong>Por qué pican los pimientos:</strong> El famoso dicho "Os pementos de Padrón, uns pican e outros non" tiene explicación científica. La capsaicina depende de tres factores: genética de la planta, edad del fruto (los más maduros pican más) y estrés ambiental (falta de agua, exceso de sol). En mayo, cuando tú pasas, estarán empezando la temporada y serán más suaves.</li>
+          <li><strong>El verdadero nombre:</strong> La DOP oficial es "Pemento de Herbón" (no de Padrón), reconocida en 2009. Los frailes franciscanos del Convento de Herbón trajeron las semillas de México en el siglo XVII.</li>
+          <li><strong>La Traslación:</strong> Cada 30 de diciembre se celebra en la Iglesia de Santiago la ceremonia de la Traslación (la ruta de la barca del Apóstol), documentada desde 1588 y recuperada en 2008 tras un largo periodo de olvido.</li>
+          <li><strong>Vía Crucis fluvial único en el mundo:</strong> 17 cruceiros submarinos en el fondo del río Ulla marcan la ruta de la Traslatio — el único Vía Crucis fluvial-marítimo del mundo.</li>
+        </ul>
+
+        <h4>Fiestas destacadas</h4>
+        <ul>
+          <li><strong>Festa do Pemento de Herbón</strong> (primer sábado de agosto) — Fiesta de Interés Turístico de Galicia, desde 1978. Se celebra en la carballeira del Convento de Herbón. Se reparten gratis 1.500 kg de pimientos (unas 3.500 raciones). Procesión, misa, desfile agrícola, música y baile al aire libre.</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 7. Gastronomía típica -->
+    <article class="acc-item" id="gastronomia">
+      <button class="acc-head">
+        <span><span class="ic">🍴</span>Gastronomía típica</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <ul>
+          <li><strong>Pimientos de Herbón</strong> — Fritos en aceite y con sal gruesa. La tapa gallega por excelencia. Ahora que conoces la historia del Convento de Herbón, los apreciarás más.</li>
+          <li><strong>Pulpo á feira</strong> — Estamos en Galicia.</li>
+          <li><strong>Empanada gallega</strong> — De distintos rellenos.</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 8. Ruta recomendada del pueblo -->
+    <article class="acc-item" id="ruta-pueblo">
+      <button class="acc-head">
+        <span><span class="ic">📍</span>Ruta recomendada del pueblo</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <p>~1,6 km · 1,5-2h con visitas. Tu alojamiento (Apartamento Doña Elena II, Rúa Real) está en la calle principal del centro. Sube primero al Convento del Carmen y luego baja al río para no subir después.</p>
+        <table>
+          <thead>
+            <tr><th>#</th><th>Punto</th><th>Desde anterior</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Doña Elena II (dejar mochila)</td><td>—</td></tr>
+            <tr><td>2</td><td>Convento del Carmen + Fuente del Carmen (subida, lo más alto)</td><td>~400 m</td></tr>
+            <tr><td>3</td><td>Iglesia de Santiago (el Pedrón, bajando)</td><td>~400 m</td></tr>
+            <tr><td>4</td><td>Paseo del Espolón — Monumento a Rosalía</td><td>~200 m</td></tr>
+            <tr><td>5</td><td>Paseo del Espolón — Monumento a Cela</td><td>~150 m</td></tr>
+            <tr><td>6</td><td>Jardín botánico-artístico</td><td>~300 m</td></tr>
+            <tr><td>7</td><td>Confluencia ríos Sar y Ulla</td><td>~400 m</td></tr>
+            <tr><td>8</td><td>Vuelta al alojamiento</td><td>~500 m</td></tr>
+          </tbody>
+        </table>
+        <p>La Casa Museo de Rosalía (2 km) y la Fundación Cela en Iria Flavia (1 km) merecen mucho la pena si llegas con tiempo. La Colegiata de Adina y la tumba de Cela las verás al día siguiente al salir hacia Santiago.</p>
+      </div>
+    </article>
+
+    <!-- 9. Dónde comer -->
+    <article class="acc-item" id="comer">
+      <button class="acc-head">
+        <span><span class="ic">🍽</span>Dónde comer</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <div class="item">
+          <div class="name">Casa Coquín</div>
+          <div class="det">Rúa Longa · LA referencia para pimientos de Padrón · Menú ~12 €</div>
+        </div>
+        <div class="item">
+          <div class="name">A Casa dos Martínez</div>
+          <div class="det">Centro · Pimientos locales · Menú ~12-14 €</div>
+        </div>
+        <div class="item">
+          <div class="name">O Paso</div>
+          <div class="det">Rúa do Medio · Menú peregrino ~10 €</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 10. Hotel de hoy -->
+    <article class="acc-item" id="hotel">
+      <button class="acc-head">
+        <span><span class="ic">🛏</span>Hotel de hoy</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <div class="item">
+          <div class="name">Apartamento Doña Elena II</div>
+          <div class="det">Rúa Real · 75 €</div>
+          <p style="margin-top:8px"><a href="https://www.booking.com/hotel/es/apartamento-dona-elena-ii-padron.es.html?checkin=2026-05-21&checkout=2026-05-22&group_adults=1&no_rooms=1" target="_blank" rel="noopener">Ver en Booking →</a></p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 11. Fotografía y contemplación -->
+    <article class="acc-item" id="fotos">
+      <button class="acc-head">
+        <span><span class="ic">📸</span>Fotografía y contemplación</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <h4>Fotografía</h4>
+        <ul>
+          <li><strong>Robledales (km 3-8)</strong> — Todo en su máximo verde en mayo. Mañana temprana: humedad de la noche crea bruma baja entre los árboles.</li>
+          <li><strong>Convento de Herbón</strong> — Campos de pimientos de Padrón con el monasterio al fondo. En mayo las plantas están jóvenes y verdes.</li>
+          <li><strong>Río Sar con Padrón al fondo</strong> — Desde el puente sobre el Sar. Atardecer, luz desde el oeste.</li>
+        </ul>
+        <h4>Contemplación</h4>
+        <ul>
+          <li><strong>Ribera del río Sar en Padrón</strong> — Paseo con bancos junto al río. Pueblo tranquilo, sauces, pocos turistas.</li>
+          <li><strong>Jardín botánico de Padrón</strong> — BIC, 300 especies, entrada gratuita. Bancos y sombra.</li>
+          <li><strong>Iglesia de Santiago (interior)</strong> — Sentarse en un banco sabiendo que estás donde según la tradición llegó el Apóstol. Acceso libre.</li>
+          <li><strong>Confluencia ríos Sar y Ulla</strong> — Atardecer. Los 17 cruceiros submarinos están bajo el agua aquí.</li>
+        </ul>
+      </div>
+    </article>
+
+  </div>
+
+  <button class="btn-primary" id="btn-toggle-completed" data-stage-id="5">
+    Marcar como completada
+  </button>
+
+  <script type="module" src="/camino/js/app.js"></script>
+  <script type="module" src="/camino/js/progress.js"></script>
+  <script src="/camino/leaflet/leaflet.js"></script>
+  <script type="module" src="/camino/js/map.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => navigator.serviceWorker.register('/camino/sw.js'));
+    }
+  </script>
+</body>
+</html>

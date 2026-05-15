@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#2c5f3d">
+  <title>Etapa 2 · O Porriño → Redondela · Camino Portugués</title>
+  <link rel="manifest" href="/camino/manifest.json">
+  <link rel="stylesheet" href="/camino/css/style.css">
+  <link rel="stylesheet" href="/camino/leaflet/leaflet.css">
+  <link rel="icon" type="image/png" sizes="192x192" href="/camino/icons/icon-192.png">
+</head>
+<body>
+  <header class="topbar">
+    <a href="/camino/etapas.html" class="back" aria-label="Volver">←</a>
+    <div class="title">Etapa 2 · O Porriño → Redondela</div>
+  </header>
+
+  <section class="hero">
+    <span class="badge">ETAPA 2</span>
+    <h1>O Porriño → Redondela</h1>
+    <div class="meta">16 km · Lunes 18 mayo · Salida ~9:00</div>
+  </section>
+
+  <div class="accordion">
+
+    <!-- 1. Resumen -->
+    <article class="acc-item" id="resumen">
+      <button class="acc-head">
+        <span><span class="ic">📋</span>Resumen</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <table>
+          <tbody>
+            <tr><th>Distancia</th><td>16 km</td></tr>
+            <tr><th>Hora salida recomendada</th><td>9:00</td></tr>
+            <tr><th>Tiempo estimado</th><td>4h30 (a 4-4,5 km/h con paradas cada 5-6 km)</td></tr>
+            <tr><th>Dificultad</th><td>Media con tramo crítico de descenso</td></tr>
+            <tr><th>Aviso rodillas</th><td><strong>ATENCIÓN:</strong> descenso largo a Redondela con 8-12% pendiente. Alarga los bastones 5-10 cm, planta antes de pisar, pasos cortos. Es el punto más exigente de toda la ruta para tus rodillas.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <!-- 2. Antes de salir -->
+    <article class="acc-item" id="antes">
+      <button class="acc-head">
+        <span><span class="ic">🥾</span>Antes de salir</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <p>Si no lo viste el día anterior, date una vuelta rápida por el Ayuntamiento de Palacios y, sobre todo, el templete de San Luis — la historia de la boca de metro original merece verlo con calma.</p>
+      </div>
+    </article>
+
+    <!-- 3. Durante la etapa -->
+    <article class="acc-item" id="durante">
+      <button class="acc-head">
+        <span><span class="ic">🛤</span>Durante la etapa</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <div class="mapa" id="mapa-2" data-etapa="2"></div>
+        <ul>
+          <li><strong>Mos</strong> — Pueblo tranquilo y peatonal. Tiene el Pazo dos Marqueses (casa señorial gallega), la Iglesia de Santa Eulalia, una fuente con vieiras y peregrinos, y el Cruceiro de Cabaleiros (cruz de piedra en el camino).</li>
+          <li><strong>Capilla de Santiaguiño de Anta</strong> — Ermita con fuerte vinculación jacobea. Cerca está el Cruceiro de Santiaguiño do Monte.</li>
+          <li><strong>Miliario de Guizán</strong> — Hito cilíndrico del siglo II d.C., del Alto Imperio Romano. Es un hito de la <strong>Vía XIX del Itinerario Antonino</strong>, la calzada que unía Braga (Bracara Augusta) con Astorga (Asturica Augusta) pasando por Tui y Santiago. Lo más notable: es el <strong>único miliario de esta vía que permanece en su ubicación original</strong> — los demás fueron movidos a museos o perdidos. Tiene <strong>cruces grabadas</strong> en su superficie, probablemente añadidas en época medieval para "cristianizar" el monumento pagano. Cuando quisieron trasladarlo al museo de Pontevedra, los vecinos se opusieron porque creían que la piedra les proporcionaba fertilidad y buena suerte. El miliario marca exactamente el límite entre los municipios de Mos y Redondela.</li>
+          <li><strong>Inscripción "Camino de Santiago"</strong> — En una cruz de piedra del camino, prueba de la tradición jacobea secular de esta ruta.</li>
+        </ul>
+        <h4>Bares y servicios en ruta</h4>
+        <table>
+          <thead>
+            <tr><th>Km</th><th>Lugar</th><th>Servicios</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>~6</td><td>Mos</td><td>Bar, fuente</td></tr>
+            <tr><td>~10</td><td>Santiaguiño de Anta</td><td>Ermita y zona de descanso</td></tr>
+            <tr><td>16</td><td>Redondela</td><td>Todos los servicios al llegar</td></tr>
+          </tbody>
+        </table>
+        <p><strong>Aviso:</strong> tras Mos comienza el descenso a Redondela. Mos es la última parada antes de la bajada exigente — aprovecha para hidratarte, comer algo y revisar bastones antes de afrontarla.</p>
+      </div>
+    </article>
+
+    <!-- 4. Al llegar a Redondela -->
+    <article class="acc-item" id="llegar">
+      <button class="acc-head">
+        <span><span class="ic">🏛</span>Al llegar a Redondela</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <p>Redondela es la "Vila Choqueira" (a sus habitantes se les llama "choqueiros") y la "Villa de los Viaductos". Tiene mucho que ver para una tarde. Dato histórico poco conocido: durante la Segunda Guerra Mundial, el médico local <strong>Dr. Eduardo Martínez Alonso</strong> escondió judíos que huían del nazismo.</p>
+      </div>
+    </article>
+
+    <!-- 5. Qué ver -->
+    <article class="acc-item" id="ver">
+      <button class="acc-head">
+        <span><span class="ic">👁</span>Qué ver</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <div class="item">
+          <div class="name">Viaducto de Madrid (1876)</div>
+          <div class="det">El más antiguo, de hierro forjado y cantería. Bien de Interés Cultural. <strong>Aclaración:</strong> mucha gente cree que lo diseñó Eiffel. Falso. Lo construyó la empresa francesa <strong>Parent Schaken</strong>. La leyenda de <strong>Pedro Floriani</strong>, el ingeniero italiano que lo construyó, cuenta que intentó suicidarse lanzándose desde los 32 metros de altura del viaducto, pero la realidad es que Floriani murió en 1911, a los 77 años, de causa natural. Cuando el rey <strong>Alfonso XII</strong> vio el viaducto terminado en 1877, quedó asombrado.</div>
+        </div>
+        <div class="item">
+          <div class="name">Viaducto de Pontevedra (1884)</div>
+          <div class="det">150 metros de largo, fabricado por la Maquinista Terrestre y Marítima de Barcelona. También BIC. Lo más impresionante: <strong>sigue en uso activo 140 años después</strong> de su inauguración. Pasan trenes de media distancia, el tren hotel y mercancías. Juntos, los dos viaductos forman la estampa más icónica de Redondela.</div>
+        </div>
+        <div class="item">
+          <div class="name">Iglesia de Santiago</div>
+          <div class="det">Del siglo XV, construida sobre una estructura anterior consagrada por el arzobispo Gelmírez en 1114.</div>
+        </div>
+        <div class="item">
+          <div class="name">Isla de San Simón</div>
+          <div class="det">Visible desde el paseo marítimo. Una isla con varias capas de historia. Fue monasterio medieval, lazareto, y <strong>campo de concentración franquista entre 1936 y 1943</strong>, por el que pasaron más de 5.600 presos políticos. <strong>Julio Verne</strong> sitúa una escena clave de <em>Veinte mil leguas de viaje submarino</em> en la ría de Vigo, inspirada en la <strong>Batalla de Rande de 1702</strong>, cuando una flota anglo-holandesa hundió galeones españoles y franceses que transportaban oro y plata de América. Si bajas a la <strong>playa de Cesantes</strong>, encontrarás una <strong>estatua del Capitán Nemo</strong> mirando al mar.</div>
+        </div>
+        <div class="item">
+          <div class="name">Cementerio Os Eidos</div>
+          <div class="det">De 1830, elegido <strong>cementerio más bonito de España en 2022</strong>. Mausoleos y panteones de distintos estilos, algunos con <strong>simbología masónica</strong> en los detalles decorativos. Hay visitas guiadas gratuitas el segundo sábado de cada mes a las 20:30.</div>
+        </div>
+        <div class="item">
+          <div class="name">Pazo de Petán (Santa Teresa)</div>
+          <div class="det">Con una torre almenada del siglo XVII.</div>
+        </div>
+        <div class="item">
+          <div class="name">Alameda de Castelao</div>
+          <div class="det">Jardines con árboles centenarios, camelias y rosales. Aquí estuvo el <strong>puerto comercial de Redondela durante 700 años</strong> (siglos XIII al XX). Buen sitio para descansar.</div>
+        </div>
+        <div class="item">
+          <div class="name">Paseo da Portela</div>
+          <div class="det">Paseo por el litoral con pasarelas de madera, junto a la desembocadura del río Alvedosa.</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 6. Curiosidades de Redondela -->
+    <article class="acc-item" id="curiosidades">
+      <button class="acc-head">
+        <span><span class="ic">✨</span>Curiosidades de Redondela</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <ul>
+          <li><strong>Choqueiros:</strong> Los habitantes de Redondela son llamados "choqueiros" por su pasión por el choco (sepia). La empanada de choco es única de aquí.</li>
+          <li><strong>La Fiesta de la Coca</strong> (Corpus Christi) — Documentada desde 1482. Un dragón articulado recorre las calles, hay danza de espadas y alfombras florales. Fiesta de Interés Turístico Internacional.</li>
+          <li><strong>Capitán Nemo en Redondela:</strong> Julio Verne situó escenas de <em>Veinte mil leguas</em> en la ría de Vigo por la Batalla de Rande de 1702. En la playa de Cesantes hay una estatua del Capitán Nemo mirando al lugar donde supuestamente yace el tesoro hundido.</li>
+          <li><strong>Cementerio más bonito de España:</strong> Os Eidos, premiado en 2022, con simbología masónica en sus panteones.</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 7. Gastronomía típica -->
+    <article class="acc-item" id="gastronomia">
+      <button class="acc-head">
+        <span><span class="ic">🍴</span>Gastronomía típica</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <ul>
+          <li><strong>Choco (sepia)</strong> — El plato estrella de Redondela. La especialidad local es la <strong>empanada de choco</strong>, única de aquí y no la encontrarás en ningún otro pueblo del Camino.</li>
+          <li><strong>Marisco de la ría</strong> — Estás en la ría de Vigo.</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 8. Ruta recomendada del pueblo -->
+    <article class="acc-item" id="ruta-pueblo">
+      <button class="acc-head">
+        <span><span class="ic">📍</span>Ruta recomendada del pueblo</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <p>~2,2 km · 1,5-2h con visitas. Tu alojamiento (Bahía de San Simón, Rúa Subida a Estación Vella 35) está en la zona alta, cerca de la entrada del Camino. Deja la mochila y baja visitando. Tendrás que subir de vuelta al final (~15 min).</p>
+        <table>
+          <thead>
+            <tr><th>#</th><th>Punto</th><th>Desde anterior</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Bahía de San Simón (dejar mochila)</td><td>—</td></tr>
+            <tr><td>2</td><td>Cementerio Os Eidos (zona alta, cerca del alojamiento)</td><td>~200 m</td></tr>
+            <tr><td>3</td><td>Pazo de Petán</td><td>~300 m</td></tr>
+            <tr><td>4</td><td>Viaducto de Madrid (1876)</td><td>~500 m</td></tr>
+            <tr><td>5</td><td>Viaducto de Pontevedra (1884)</td><td>~150 m</td></tr>
+            <tr><td>6</td><td>Alameda de Castelao</td><td>~200 m</td></tr>
+            <tr><td>7</td><td>Iglesia de Santiago</td><td>~250 m</td></tr>
+            <tr><td>8</td><td>Paseo da Portela</td><td>~300 m</td></tr>
+            <tr><td>9</td><td>Vistas de la Isla de San Simón (paseo marítimo)</td><td>~400 m</td></tr>
+            <tr><td>10</td><td>Vuelta al alojamiento (subida suave)</td><td>~600 m</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <!-- 9. Dónde comer -->
+    <article class="acc-item" id="comer">
+      <button class="acc-head">
+        <span><span class="ic">🍽</span>Dónde comer</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <p>El choco es obligatorio en Redondela.</p>
+        <div class="item">
+          <div class="name">O Anfiteatro</div>
+          <div class="det">Rúa Alfonso XII · Choco frito y encebollado · Menú ~12 €</div>
+        </div>
+        <div class="item">
+          <div class="name">Casa Pilar</div>
+          <div class="det">Rúa Pai Crespo · Cocina marinera, choco en todas formas · Menú ~11-13 €</div>
+        </div>
+        <div class="item">
+          <div class="name">Mesón Xaime</div>
+          <div class="det">Junto al paseo marítimo · Choco frito de los mejores</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 10. Hotel de hoy -->
+    <article class="acc-item" id="hotel">
+      <button class="acc-head">
+        <span><span class="ic">🛏</span>Hotel de hoy</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <div class="item">
+          <div class="name">Bahía de San Simón</div>
+          <div class="det">Rúa Subida a Estación Vella, 35 · 66 €</div>
+          <p style="margin-top:8px"><a href="https://www.booking.com/hotel/es/bahia-de-san-simon.es.html?checkin=2026-05-18&checkout=2026-05-19&group_adults=1&no_rooms=1" target="_blank" rel="noopener">Ver en Booking →</a></p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 11. Fotografía y contemplación -->
+    <article class="acc-item" id="fotos">
+      <button class="acc-head">
+        <span><span class="ic">📸</span>Fotografía y contemplación</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <h4>Fotografía</h4>
+        <ul>
+          <li><strong>Bajada a Redondela con vista de la Ría de Vigo</strong> — El momento cumbre de esta etapa. Se abre la primera vista de las Rías Baixas: la ría con las bateas (plataformas de mejillones) flotando. Mediodía o primera tarde. Spot concreto: barrio de Cedeira/Soutelo, vista panorámica de la ría, los viaductos y el pueblo. <strong>Una de las mejores vistas del Camino Portugués entero.</strong></li>
+          <li><strong>Viaductos de Redondela</strong> — Atardecer (~20:00-21:00), luz dorada lateral. Desde la Praza da Constitución se ven ambos enmarcados.</li>
+          <li><strong>Casco antiguo</strong> — Rúa de Isidoro Queimaliños: balcones con flores, encuadre medieval.</li>
+        </ul>
+        <h4>Contemplación</h4>
+        <ul>
+          <li><strong>Paseo marítimo de Redondela</strong> — Llano, bancos frente al agua con vistas a las bateas y las Islas Cíes en el horizonte. Brisa marina.</li>
+          <li><strong>Alameda de Redondela</strong> — Jardín con bancos, sombra y tranquilidad. Junto al Camino.</li>
+          <li><strong>Praza da Constitución</strong> — Temprano por la mañana (~07:30) está vacía. Bancos bajo árboles.</li>
+        </ul>
+      </div>
+    </article>
+
+  </div>
+
+  <button class="btn-primary" id="btn-toggle-completed" data-stage-id="2">
+    Marcar como completada
+  </button>
+
+  <script type="module" src="/camino/js/app.js"></script>
+  <script type="module" src="/camino/js/progress.js"></script>
+  <script src="/camino/leaflet/leaflet.js"></script>
+  <script type="module" src="/camino/js/map.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => navigator.serviceWorker.register('/camino/sw.js'));
+    }
+  </script>
+</body>
+</html>

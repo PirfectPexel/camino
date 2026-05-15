@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#2c5f3d">
+  <title>Etapa 3 · Redondela → Pontevedra · Camino Portugués</title>
+  <link rel="manifest" href="/camino/manifest.json">
+  <link rel="stylesheet" href="/camino/css/style.css">
+  <link rel="stylesheet" href="/camino/leaflet/leaflet.css">
+  <link rel="icon" type="image/png" sizes="192x192" href="/camino/icons/icon-192.png">
+</head>
+<body>
+  <header class="topbar">
+    <a href="/camino/etapas.html" class="back" aria-label="Volver">←</a>
+    <div class="title">Etapa 3 · Redondela → Pontevedra</div>
+  </header>
+
+  <section class="hero">
+    <span class="badge">ETAPA 3</span>
+    <h1>Redondela → Pontevedra</h1>
+    <div class="meta">20 km · Martes 19 mayo · Salida ~9:00</div>
+  </section>
+
+  <div class="accordion">
+
+    <!-- 1. Resumen -->
+    <article class="acc-item" id="resumen">
+      <button class="acc-head">
+        <span><span class="ic">📋</span>Resumen</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <table>
+          <tbody>
+            <tr><th>Distancia</th><td>20 km</td></tr>
+            <tr><th>Hora salida recomendada</th><td>9:00</td></tr>
+            <tr><th>Tiempo estimado</th><td>5h30 (a 4-4,5 km/h con paradas cada 5-6 km)</td></tr>
+            <tr><th>Dificultad</th><td>Llana mayoritariamente, con suaves repechos</td></tr>
+            <tr><th>Aviso rodillas</th><td>Tramo bonito pegado a la ría. Ponte Sampaio tiene una pequeña subida tras el puente, gradual. Sin descensos críticos.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <!-- 2. Antes de salir -->
+    <article class="acc-item" id="antes">
+      <button class="acc-head">
+        <span><span class="ic">🥾</span>Antes de salir</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <p>Si no los viste por la tarde, los viaductos al amanecer son espectaculares.</p>
+      </div>
+    </article>
+
+    <!-- 3. Durante la etapa -->
+    <article class="acc-item" id="durante">
+      <button class="acc-head">
+        <span><span class="ic">🛤</span>Durante la etapa</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <div class="mapa" id="mapa-3" data-etapa="3"></div>
+        <ul>
+          <li><strong>Cesantes (km 2,2)</strong> — Pueblo costero con playa de 2,5 km y lonja de pescado. Bonitas vistas de la ría. Aquí está la <strong>estatua del Capitán Nemo</strong> en la playa, mirando hacia la Isla de San Simón y el lugar donde se hundieron los galeones de la Batalla de Rande.</li>
+          <li><strong>Arcade (km ~5)</strong> — Famoso en toda Galicia por sus ostras. La Fiesta de la Ostra (primer fin de semana de abril) atrae a más de 25.000 personas. Aunque en mayo no es la fiesta, en los bares y marisquerías puedes comer ostras frescas. Buen sitio para el almuerzo de media etapa. Arcade también tiene un jardín con más de 500 tipos de camelias.</li>
+          <li><strong>Ponte Sampaio (km ~6,5)</strong> — Punto clave histórico:
+            <br><br><strong>Puente medieval de piedra</strong> — Aquí tuvo lugar una de las batallas más insólitas de la Guerra de la Independencia. Entre el 7 y el 9 de junio de 1809, un ejército improvisado de gallegos se enfrentó a 8.000 soldados del mariscal Michel Ney. Los gallegos tenían 6.000 hombres y construyeron <strong>cañones de madera ("cañóns de pau")</strong> con troncos de roble ahuecados y aros de hierro. Los gallegos destruyeron parte del puente y <strong>Pablo Morillo, "El León de Sampaio"</strong>, dirigió una defensa tan feroz que Ney convocó consejo de oficiales y decidió la retirada. Un ejército curtido en media Europa huía ante campesinos armados con cañones de madera. Esta batalla supuso la evacuación definitiva de Galicia por parte del ejército napoleónico.
+            <br><br><strong>Iglesia románica de Santa María de Pontesampaio</strong> — Del siglo XIII, junto al puente.</li>
+        </ul>
+        <h4>Bares y servicios en ruta</h4>
+        <table>
+          <thead>
+            <tr><th>Km</th><th>Lugar</th><th>Servicios</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>~2,2</td><td>Cesantes</td><td>Bares, playa</td></tr>
+            <tr><td>~5</td><td>Arcade</td><td>Muchos bares y marisquerías, ideal para almuerzo</td></tr>
+            <tr><td>~6,5</td><td>Ponte Sampaio</td><td>Bar junto al puente</td></tr>
+            <tr><td>~14</td><td>Entrada Pontevedra</td><td>Bares, fuentes</td></tr>
+            <tr><td>20</td><td>Pontevedra</td><td>Todos los servicios al llegar</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <!-- 4. Al llegar a Pontevedra -->
+    <article class="acc-item" id="llegar">
+      <button class="acc-head">
+        <span><span class="ic">🏛</span>Al llegar a Pontevedra</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <p>Pontevedra es una ciudad con uno de los cascos históricos más bonitos de Galicia (el segundo después de Santiago). Su nombre viene del latín <strong>"Ponte Veteri"</strong> (puente viejo), por el puente romano que cruzaba el río Lérez. La leyenda dice que fue fundada por <strong>Teucro</strong>, héroe griego superviviente de la Guerra de Troya, que al no poder volver a su isla de Salamina vagó por el Mediterráneo hasta asentarse aquí.</p>
+        <p>Otra teoría que te encontrarás (no demostrada, pero con argumentos interesantes) es la del <strong>Colón gallego</strong>: que Cristóbal Colón no era genovés sino pontevedrés. Hay una asociación local que lo defiende con pasión.</p>
+        <p>El <strong>modelo peatonal</strong> de Pontevedra merece mención aparte. Pasaron de <strong>80.000 vehículos diarios</strong> en el centro a solo 7.000. Las emisiones de CO2 bajaron un 70%. En 2021 celebraron <strong>la primera década sin muertos por accidente de tráfico urbano</strong> en una ciudad española. Han ganado <strong>14 premios internacionales</strong> de urbanismo. Busca el <strong>Metrominuto</strong>: un mapa peatonal con estética de plano de metro que indica las distancias a pie entre puntos de interés.</p>
+      </div>
+    </article>
+
+    <!-- 5. Qué ver -->
+    <article class="acc-item" id="ver">
+      <button class="acc-head">
+        <span><span class="ic">👁</span>Qué ver</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <div class="item">
+          <div class="name">Basílica de Santa María la Mayor</div>
+          <div class="det">La iglesia más importante de Pontevedra. Gótico isabelino y plateresco del siglo XVI. Declarada Basílica por el Papa Juan XXIII en 1962. Fue encargada por el <strong>Gremio de Mareantes</strong>. Fíjate en la fachada: entre los santos hay figuras de <strong>Teucro y Hércules</strong>. Y busca el detalle más divertido: <strong>San Jerónimo lleva gafas</strong>, un anacronismo evidente dado que las gafas no se inventaron hasta el siglo XIII y San Jerónimo vivió en el siglo IV. Dentro, no te pierdas el <strong>Cristo del Buen Viaje</strong>. <strong>Horarios:</strong> L-S 10:00-13:30 y 17:00-21:00; Dom 10:00-14:00 y 18:00-21:00. Gratis.</div>
+        </div>
+        <div class="item">
+          <div class="name">Ruinas de Santo Domingo</div>
+          <div class="det">Convento gótico del siglo XIII del que quedan la cabecera con cinco ábsides, un muro lateral y la entrada con su rosetón gótico. Los dominicos construyeron este convento <strong>deliberadamente más grande</strong> que el de los franciscanos por pura <strong>rivalidad entre órdenes religiosas</strong>. Declarado <strong>Bien de Interés Cultural en 1895</strong>, es una de las declaraciones más antiguas de España. <strong>Visitas guiadas gratuitas:</strong> M-V a las 12:00.</div>
+        </div>
+        <div class="item">
+          <div class="name">Santuario de la Virgen Peregrina</div>
+          <div class="det">En la Plaza de la Peregrina. La capilla tiene <strong>planta en forma de concha de vieira</strong>, construida en 1778, dedicada a la patrona de la provincia. Dentro hay una pila de agua bendita con una <strong>concha gigante traída del Océano Pacífico</strong> por el almirante Méndez Núñez. En el atrio hay un relieve de <strong>Teucro estrangulando al León de Nemea</strong>... pero esa hazaña es de Hércules, no de Teucro. El escultor confundió a los dos héroes griegos. Por 1 € puedes subir al campanario.</div>
+        </div>
+        <div class="item">
+          <div class="name">Plaza de la Herrería</div>
+          <div class="det">Una de las plazas más emblemáticas, frente a la Iglesia de San Francisco. Las arcadas albergaban antiguamente herrerías. Aquí se celebraban corridas de toros desde el siglo XVII. Fíjate en la <strong>Casa de las Caras</strong>: un edificio con medallones misteriosos en la fachada cuya identidad nadie ha descifrado con certeza.</div>
+        </div>
+        <div class="item">
+          <div class="name">Plaza de la Leña</div>
+          <div class="det">Antiguamente mercado de leña. Rodeada de casonas del siglo XVIII. Ambiente muy gallego, con terrazas.</div>
+        </div>
+        <div class="item">
+          <div class="name">Museo Provincial</div>
+          <div class="det">En el complejo de Santo Domingo. Tiene la <strong>mayor colección de obras de Castelao</strong> (el artista gallego más importante del siglo XX) y el <strong>mayor tesoro de oro prehistórico de Europa</strong> (el de Caldas de Reis, que verás referenciado en la etapa 4). Gratuito para ciudadanos de la UE.</div>
+        </div>
+        <div class="item">
+          <div class="name">Puente del Burgo</div>
+          <div class="det">El puente que le da nombre a la ciudad ("Ponte Veteri" = puente viejo). Tiene <strong>conchas de peregrino esculpidas</strong> en la piedra. Merece un paseo si llegas con fuerzas.</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 6. Curiosidades de Pontevedra -->
+    <article class="acc-item" id="curiosidades">
+      <button class="acc-head">
+        <span><span class="ic">✨</span>Curiosidades de Pontevedra</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <ul>
+          <li><strong>Teucro por todas partes:</strong> El héroe griego fundador de la ciudad aparece en la fachada de la basílica, en un relieve del santuario (confundido con Hércules) y en el escudo de la ciudad.</li>
+          <li><strong>El modelo peatonal más premiado de España:</strong> Primera ciudad española en pasar una década sin muertos por accidente de tráfico urbano. 14 premios internacionales de urbanismo.</li>
+          <li><strong>San Jerónimo con gafas:</strong> En la fachada de la Basílica de Santa María — un anacronismo del s. XVI que nadie corrigió.</li>
+          <li><strong>Colón pontevedrés:</strong> Una asociación local defiende, con argumentos documentados, que Cristóbal Colón no era genovés sino de Pontevedra.</li>
+          <li><strong>Curiosidad gastronómica:</strong> En la festividad de San Benitino de Lérez, los devotos van a la ermita a curar verrugas frotándolas con pan, y se reparten gratis <strong>mil kilos de mejillones</strong>.</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 7. Gastronomía típica -->
+    <article class="acc-item" id="gastronomia">
+      <button class="acc-head">
+        <span><span class="ic">🍴</span>Gastronomía típica</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <ul>
+          <li><strong>Langosta con chocolate picadillo</strong> — Suena raro, pero es una receta <strong>única de Pontevedra</strong> que no encontrarás en otro sitio. Langosta con una salsa de chocolate picante.</li>
+          <li><strong>Lamprea en sangre</strong> — Plato de temporada (enero-abril), guisada en su propia sangre.</li>
+          <li><strong>Percebes</strong> — Estás en las Rías Baixas, zona de percebeiros.</li>
+          <li><strong>Ostras de Arcade</strong> — Las que venías de comer en la etapa. Ya apreciadas en época romana; la corte de Madrid recibía ostras de Arcade en escabeche durante siglos.</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 8. Ruta recomendada del pueblo -->
+    <article class="acc-item" id="ruta-pueblo">
+      <button class="acc-head">
+        <span><span class="ic">📍</span>Ruta recomendada del pueblo</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <p>~1,1 km · 1,5-2h con visitas. Tu alojamiento (Hotel Madrid, C/ Andrés Mellado 5) está en el centro, junto a la Plaza de Galicia y muy cerca de la Peregrina. Bucle desde el hotel por el casco peatonal.</p>
+        <table>
+          <thead>
+            <tr><th>#</th><th>Punto</th><th>Desde anterior</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Hotel Madrid (dejar mochila)</td><td>—</td></tr>
+            <tr><td>2</td><td>Santuario de la Virgen Peregrina (a 5 min del hotel)</td><td>~300 m</td></tr>
+            <tr><td>3</td><td>Plaza de la Herrería</td><td>~100 m</td></tr>
+            <tr><td>4</td><td>Iglesia de San Francisco</td><td>~200 m</td></tr>
+            <tr><td>5</td><td>Plaza de la Leña</td><td>~250 m</td></tr>
+            <tr><td>6</td><td>Museo Provincial</td><td>~50 m</td></tr>
+            <tr><td>7</td><td>Ruinas de Santo Domingo</td><td>~150 m</td></tr>
+            <tr><td>8</td><td>Basílica de Santa María la Mayor</td><td>~300 m</td></tr>
+            <tr><td>9</td><td>Vuelta al Hotel Madrid</td><td>~400 m</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <!-- 9. Dónde comer -->
+    <article class="acc-item" id="comer">
+      <button class="acc-head">
+        <span><span class="ic">🍽</span>Dónde comer</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <div class="item">
+          <div class="name">Casa Fidel</div>
+          <div class="det">Praza da Leña · Institución, tortilla espectacular · Tapa+caña ~2.50-3 €</div>
+        </div>
+        <div class="item">
+          <div class="name">A Navarra</div>
+          <div class="det">Casco antiguo · Menú peregrino ~10-11 €</div>
+        </div>
+        <div class="item">
+          <div class="name">Eirado da Leña</div>
+          <div class="det">Praza da Leña · Estrella Michelin, menú degustación ~55-65 € (capricho)</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 10. Hotel de hoy -->
+    <article class="acc-item" id="hotel">
+      <button class="acc-head">
+        <span><span class="ic">🛏</span>Hotel de hoy</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <div class="item">
+          <div class="name">Hotel Madrid</div>
+          <div class="det">C/ Andrés Mellado, 5 · 59 €</div>
+          <p style="margin-top:8px"><a href="https://www.booking.com/hotel/es/madrid-pontevedra.es.html?checkin=2026-05-19&checkout=2026-05-20&group_adults=1&no_rooms=1" target="_blank" rel="noopener">Ver en Booking →</a></p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 11. Fotografía y contemplación -->
+    <article class="acc-item" id="fotos">
+      <button class="acc-head">
+        <span><span class="ic">📸</span>Fotografía y contemplación</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <h4>Fotografía</h4>
+        <ul>
+          <li><strong>Senda junto a la Ría (km 2-8)</strong> — Los primeros kilómetros van pegados a la ría. Bateas a pocos metros, barcos de mariscadores. Mañana, la luz sobre la ría es mágica.</li>
+          <li><strong>Puente medieval de Ponte Sampaio</strong> — Arcos de piedra reflejados en el agua del Verdugo. Mañana temprano (~08:30-09:30), sin viento, reflejos perfectos. Desde la orilla sur, aguas abajo.</li>
+          <li><strong>Basílica de Santa María la Mayor, Pontevedra</strong> — Fachada plateresca. Mañana (~10:00-11:00), sol directo en la fachada.</li>
+          <li><strong>Ruinas de Santo Domingo</strong> — Arcos góticos contra el cielo. Dramáticas, pocos peregrinos las visitan. A 3 min del casco antiguo, sin cuesta.</li>
+          <li><strong>Plaza de la Leña</strong> — Cruceiro en el centro, casas de piedra con soportales. Tarde (luz lateral) o amanecer (vacía, luz rasante).</li>
+        </ul>
+        <h4>Contemplación</h4>
+        <ul>
+          <li><strong>Senda fluvial junto a la Ría (km 2-8)</strong> — Bancos periódicos y zonas de hierba junto al agua. Cualquier punto vale.</li>
+          <li><strong>Alameda de Pontevedra</strong> — Gran jardín con bancos bajo árboles centenarios, fuentes, estanques. <strong>Uno de los mejores lugares de contemplación de todo el Camino.</strong> Plano y accesible.</li>
+          <li><strong>Orillas del río Lérez</strong> — Paseo fluvial con bancos y césped. Agua tranquila, sauces llorones.</li>
+          <li><strong>Ruinas de Santo Domingo (interior)</strong> — Silencio entre muros góticos abiertos al cielo. Bancos de piedra. Efecto contemplativo potente.</li>
+        </ul>
+      </div>
+    </article>
+
+  </div>
+
+  <button class="btn-primary" id="btn-toggle-completed" data-stage-id="3">
+    Marcar como completada
+  </button>
+
+  <script type="module" src="/camino/js/app.js"></script>
+  <script type="module" src="/camino/js/progress.js"></script>
+  <script src="/camino/leaflet/leaflet.js"></script>
+  <script type="module" src="/camino/js/map.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => navigator.serviceWorker.register('/camino/sw.js'));
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#2c5f3d">
+  <title>Etapa 4 · Pontevedra → Caldas · Camino Portugués</title>
+  <link rel="manifest" href="/camino/manifest.json">
+  <link rel="stylesheet" href="/camino/css/style.css">
+  <link rel="stylesheet" href="/camino/leaflet/leaflet.css">
+  <link rel="icon" type="image/png" sizes="192x192" href="/camino/icons/icon-192.png">
+</head>
+<body>
+  <header class="topbar">
+    <a href="/camino/etapas.html" class="back" aria-label="Volver">←</a>
+    <div class="title">Etapa 4 · Pontevedra → Caldas</div>
+  </header>
+
+  <section class="hero">
+    <span class="badge">ETAPA 4</span>
+    <h1>Pontevedra → Caldas</h1>
+    <div class="meta">22 km · Miércoles 20 mayo · Salida ~8:30</div>
+  </section>
+
+  <div class="accordion">
+
+    <!-- 1. Resumen -->
+    <article class="acc-item" id="resumen">
+      <button class="acc-head">
+        <span><span class="ic">📋</span>Resumen</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <table>
+          <tbody>
+            <tr><th>Distancia</th><td>22 km</td></tr>
+            <tr><th>Hora salida recomendada</th><td>8:30</td></tr>
+            <tr><th>Tiempo estimado</th><td>6h00 (a 4-4,5 km/h con paradas cada 5-6 km)</td></tr>
+            <tr><th>Dificultad</th><td>Llana con suaves desniveles</td></tr>
+            <tr><th>Aviso rodillas</th><td>Etapa larga pero llana. Tras el almuerzo de mitad de etapa, las rodillas pueden cargarse. Para a estirar cada hora. Al llegar a Caldas, las termas son ideales para descargar.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <!-- 2. Antes de salir -->
+    <article class="acc-item" id="antes">
+      <button class="acc-head">
+        <span><span class="ic">🥾</span>Antes de salir</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <p>Si no la visitaste, la Basílica de Santa María abre temprano — busca a San Jerónimo con gafas en la fachada. Un paseo rápido por las plazas del casco histórico al amanecer, cuando están vacías, es una experiencia distinta.</p>
+        <p><strong>AVISO: tramo largo con poca oferta intermedia. Sal de Pontevedra con bocadillo y agua.</strong></p>
+      </div>
+    </article>
+
+    <!-- 3. Durante la etapa -->
+    <article class="acc-item" id="durante">
+      <button class="acc-head">
+        <span><span class="ic">🛤</span>Durante la etapa</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <div class="mapa" id="mapa-4" data-etapa="4"></div>
+        <ul>
+          <li><strong>Capilla de San Cayetano (Alba)</strong> — En el pueblo de Alba, con su interesante cruceiro al lado.</li>
+          <li><strong>Iglesia de Santa María de Alba</strong> — Iglesia parroquial con cruceiro.</li>
+          <li><strong>Capilla de Santa Lucía</strong> — Entre San Mauro y Ponte Balbón.</li>
+          <li><strong>Cascadas del río Barosa (Parque Natural Ría Barosa)</strong> — <strong>No te lo pierdas.</strong> Acceso fácil desde el camino, entre A Portela y Briallos. El río desciende 60 metros formando una serie de cascadas y pozas naturales, con una caída principal de más de 30 metros. A ambos lados hay <strong>17 molinos centenarios</strong> ("muíños") de la Edad Media, cada uno con nombre propio, conectados por una ingeniosa <strong>red de canales de piedra</strong>. Hay un sendero circular de unos 2 km (~1h 15 min), área recreativa, aseos y hostelería. En 1809 también hubo aquí una escaramuza de la Guerra de la Independencia: el cadete Benito Godoy Araujo y su batallón vencieron a un destacamento del mariscal Soult junto a estas cascadas.</li>
+          <li><strong>Briallos</strong> — Pueblo rural tranquilo entre bosques.</li>
+          <li><strong>Tivo</strong> — Último pueblo antes de Caldas, con fuentes para rellenar agua.</li>
+        </ul>
+        <h4>Bares y servicios en ruta</h4>
+        <table>
+          <thead>
+            <tr><th>Km</th><th>Lugar</th><th>Servicios</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>~6</td><td>Alba</td><td>Bar pequeño</td></tr>
+            <tr><td>~9</td><td>Barro</td><td>Área de descanso con fuente y mesa</td></tr>
+            <tr><td>~13</td><td>Briallos</td><td>Bar en pueblo rural</td></tr>
+            <tr><td>~18</td><td>Tivo</td><td>Fuente</td></tr>
+            <tr><td>22</td><td>Caldas de Reis</td><td>Todos los servicios al llegar</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <!-- 4. Al llegar a Caldas de Reis -->
+    <article class="acc-item" id="llegar">
+      <button class="acc-head">
+        <span><span class="ic">🏛</span>Al llegar a Caldas de Reis</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <p>Caldas de Reis es una villa termal con aguas medicinales conocidas desde antes de los romanos. Su nombre lo dice todo: "Caldas" viene del latín y significa "aguas calientes", y "Reis" (Reyes) porque aquí nació el rey Alfonso VII en 1105. Los romanos la llamaban <em>Aquis Celenis</em> y le dieron la categoría de <em>municipium</em> (ciudadanía romana plena), algo excepcional para un asentamiento en Galicia. El pueblo celta de los Cilenos ya usaba estas aguas antes de que llegaran las legiones.</p>
+        <p><strong>Dato sorprendente:</strong> En 1940, unos trabajadores encontraron por casualidad el <strong>mayor tesoro de oro prehistórico de toda Europa</strong>: 41 piezas (aros, tazas con asa, un peine) con un peso de 14,9 kg de oro puro. Se conserva en el Museo de Pontevedra. Y en 1908, al limpiar la arqueta del nacimiento termal de las Burgas, aparecieron unas 500 monedas romanas erosionadas: la gente llevaba siglos lanzando monedas al agua caliente.</p>
+      </div>
+    </article>
+
+    <!-- 5. Qué ver -->
+    <article class="acc-item" id="ver">
+      <button class="acc-head">
+        <span><span class="ic">👁</span>Qué ver</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <div class="item">
+          <div class="name">Fuente de las Burgas</div>
+          <div class="det">Construida en 1881. Tiene dos caños con cabeza de león enfrentados: de uno sale agua fría y del otro agua termal a más de 50 grados. Se puede tocar el agua con las manos y beber (la "cura hidropínica"), pero está prohibido mojarse los pies bajo multa. Acceso libre las 24 horas, gratuito. <strong>Alternativa para bañarse:</strong> el antiguo lavadero público termal contiguo está abierto 24h/365 días, gratuito, y ahí sí puedes meter los pies y remojar las piernas. Las aguas son sulfurosas, antiinflamatorias y antisépticas, especialmente buenas para dolores articulares, así que después de 22 km es un lujo.</div>
+        </div>
+        <div class="item">
+          <div class="name">Puente de Bermaña</div>
+          <div class="det">Cimentación romana del siglo I, reconstruido en el siglo XVI. Tres arcos de medio punto, pretil de piedra y una cruz del siglo XVII. Era parte de la calzada militar romana que atravesaba <em>Aquis Celenis</em>. Caldas tiene tres puentes de origen romano que aparecen en su escudo heráldico.</div>
+        </div>
+        <div class="item">
+          <div class="name">Iglesia de Santo Tomás Becket</div>
+          <div class="det">La <strong>única iglesia de toda Galicia</strong> dedicada a este santo inglés. ¿Qué hace un santo de Canterbury en Pontevedra? Según la tradición, el arzobispo Thomas Becket peregrinó a Santiago en 1167 por el Camino Portugués y descansó en Caldas. Tres años después fue asesinado en su catedral por cuatro caballeros del rey Enrique II y fue canonizado rápidamente (1173). La iglesia actual se construyó entre 1890-1894 con las piedras de la torre medieval de la reina Doña Urraca. Fue inaugurada el 9 de septiembre de 1894 con la presencia del arzobispo de Compostela.</div>
+        </div>
+        <div class="item">
+          <div class="name">Iglesia de Santa María</div>
+          <div class="det">Del siglo XII, levantada sobre los restos de una iglesia anterior destruida por Almanzor en el siglo X. Se aprecia la mano del Maestro Mateo en su portada (dos arquivoltas de medio punto sobre columnas pareadas). Los canecillos de la cabecera muestran cabezas de bóvidos, típicas del románico gallego.</div>
+        </div>
+        <div class="item">
+          <div class="name">Calle Real</div>
+          <div class="det">Antes llamada "Rúa Vella" o "Camino Real", vertebraba el pueblo desde el siglo XV. Conserva parte del trazado de la Vía Romana XIX, con casonas blasonadas y escudos heráldicos de familias nobles. Pasear por ella es caminar por 2.000 años de ruta.</div>
+        </div>
+        <div class="item">
+          <div class="name">Parque-jardín y Carballeira</div>
+          <div class="det">Declarado Bien de Interés Cultural como "sitio histórico". Nació en 1884 ligado al auge del termalismo. En la ribera derecha del Umia, con un paseo fluvial precioso que llega hasta la cascada de Segade.</div>
+        </div>
+        <div class="item">
+          <div class="name">Pedra Filga</div>
+          <div class="det">Tres enormes bloques de granito dispuestos como una mesa gigante en el Monte do Seixo. Si fuera de origen humano sería el mayor monumento megalítico de la Península Ibérica: se estima un peso de más de 3.800 toneladas. La ciencia no ha resuelto el debate: podría ser un dolmen del Neolítico (6000-3000 a.C.) o una formación natural. Está en las afueras, requiere desplazamiento.</div>
+        </div>
+
+        <h4>Termas — qué opciones hay</h4>
+        <table>
+          <thead>
+            <tr><th>Opción</th><th>Tipo</th><th>Precio</th><th>Horario</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Fuente de las Burgas</td><td>Fuente pública</td><td>Gratis</td><td>24h — Solo tocar/beber. Prohibido mojar pies</td></tr>
+            <tr><td>Lavadero termal público</td><td>Poza pública</td><td>Gratis</td><td>24h — Puedes meter pies y piernas. Junto a las Burgas</td></tr>
+            <tr><td>Balneario Acuña</td><td>Spa privado</td><td>De pago</td><td>Consultar — Edificio de arquitectura gallega del s. XX</td></tr>
+            <tr><td>Balneario Dávila</td><td>Spa privado</td><td>De pago</td><td>Consultar — Jardín de cañas de bambú único</td></tr>
+            <tr><td>Pozas del río Umia / Fervenza de Segade</td><td>Pozas naturales</td><td>Gratis</td><td>Diurno — Cascada y pozas río arriba</td></tr>
+          </tbody>
+        </table>
+        <p><strong>Consejo para las rodillas:</strong> El lavadero termal público es tu mejor opción. Gratuito, 24h, y las aguas sulfurosas a más de 40 grados son antiinflamatorias. Ideal tras 22 km.</p>
+
+        <h4>Fiestas destacadas</h4>
+        <ul>
+          <li><strong>Fiestas de San Roque</strong> (agosto) — Con el espectacular combate naval piromúsical en el río Umia.</li>
+          <li><strong>Festival Cultura Quente</strong> (principios de julio) — Festival de música.</li>
+          <li><strong>Fiesta Gastronómica del Costillar a Estaca</strong> (agosto) — En la parroquia de San Clemente.</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 6. Curiosidades de Caldas -->
+    <article class="acc-item" id="curiosidades">
+      <button class="acc-head">
+        <span><span class="ic">✨</span>Curiosidades de Caldas</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <ul>
+          <li><strong>El mayor tesoro de oro prehistórico de Europa:</strong> Encontrado en 1940 por accidente en una finca de eucaliptos cerca de Caldas. 41 piezas de 14,9 kg de oro puro. Se conserva en el Museo de Pontevedra.</li>
+          <li><strong>500 monedas romanas en el agua termal:</strong> Al limpiar el nacimiento de las Burgas en 1908, aparecieron unas 500 monedas erosionadas. Los romanos también tiraban monedas al agua caliente para pedir deseos.</li>
+          <li><strong>Única iglesia en Galicia de Santo Tomás Becket:</strong> El arzobispo de Canterbury paró aquí de camino a Santiago en 1167. Tres años después fue asesinado en su catedral.</li>
+          <li><strong>Tres puentes romanos en el escudo:</strong> Caldas tiene tres puentes de origen romano que aparecen en su heráldica municipal.</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 7. Gastronomía típica -->
+    <article class="acc-item" id="gastronomia">
+      <button class="acc-head">
+        <span><span class="ic">🍴</span>Gastronomía típica</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <ul>
+          <li><strong>Empanada caldense</strong> — De masa fina y crujiente, la más típica es de carne.</li>
+          <li><strong>Fanchucos y Cornechos</strong> — Piezas de pan de mantequilla con formas tradicionales, de panaderías artesanales.</li>
+          <li><strong>Roscón de Caldas</strong> — Dulce típico de forma antropomorfa (sin frutas confitadas, cubierto de huevo y azúcar). Diferente al roscón madrileño.</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 8. Ruta recomendada del pueblo -->
+    <article class="acc-item" id="ruta-pueblo">
+      <button class="acc-head">
+        <span><span class="ic">📍</span>Ruta recomendada del pueblo</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <p>~1,4 km · 1,5-2h con visitas. Tu alojamiento (Tierra, Rúa Porto do Rio 19) está en el centro, cerca del río. Todo llano.</p>
+        <table>
+          <thead>
+            <tr><th>#</th><th>Punto</th><th>Desde anterior</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Tierra (dejar mochila)</td><td>—</td></tr>
+            <tr><td>2</td><td>Iglesia de Santa María</td><td>~200 m</td></tr>
+            <tr><td>3</td><td>Parque-jardín (ribera del Umia)</td><td>~150 m</td></tr>
+            <tr><td>4</td><td>Puente de Bermaña (romano)</td><td>~250 m</td></tr>
+            <tr><td>5</td><td>Fuente de las Burgas + lavadero termal</td><td>~100 m</td></tr>
+            <tr><td>6</td><td>Calle Real</td><td>~100 m</td></tr>
+            <tr><td>7</td><td>Iglesia de Santo Tomás Becket</td><td>~200 m</td></tr>
+            <tr><td>8</td><td>Vuelta al alojamiento</td><td>~300 m</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <!-- 9. Dónde comer -->
+    <article class="acc-item" id="comer">
+      <button class="acc-head">
+        <span><span class="ic">🍽</span>Dónde comer</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <div class="item">
+          <div class="name">Casa Artiaga</div>
+          <div class="det">Rúa Real · Cocina gallega · Menú ~10-12 €</div>
+        </div>
+        <div class="item">
+          <div class="name">O Muíño</div>
+          <div class="det">Junto al río Umia · Cocina casera · Menú ~11-13 €</div>
+        </div>
+        <div class="item">
+          <div class="name">Bar Casino</div>
+          <div class="det">Centro · Tapas y terraza junto al paseo del río</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 10. Hotel de hoy -->
+    <article class="acc-item" id="hotel">
+      <button class="acc-head">
+        <span><span class="ic">🛏</span>Hotel de hoy</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <div class="item">
+          <div class="name">Tierra</div>
+          <div class="det">Rúa Porto do Río, 19, 2A · 48 €</div>
+          <p style="margin-top:8px"><a href="https://www.booking.com/hotel/es/tierra1.es.html?checkin=2026-05-20&checkout=2026-05-21&group_adults=1&no_rooms=1" target="_blank" rel="noopener">Ver en Booking →</a></p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 11. Fotografía y contemplación -->
+    <article class="acc-item" id="fotos">
+      <button class="acc-head">
+        <span><span class="ic">📸</span>Fotografía y contemplación</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <h4>Fotografía</h4>
+        <ul>
+          <li><strong>Bosques de eucaliptos y robles (km 5-12)</strong> — Mañana temprano (08:00-09:30), "rayos de catedral" (haces de luz entre ramas). Caminos de tierra con muros de piedra cubiertos de musgo y helechos.</li>
+          <li><strong>Cruceiros del camino</strong> — Varios en encrucijadas. Elementos muy del Camino.</li>
+          <li><strong>Puente romano de Caldas</strong> — Entrada a Caldas por el río Umia. Tarde (~18:00-19:00), luz dorada y reflejos.</li>
+          <li><strong>Fuentes termales</strong> — Columnas de vapor al aire libre. Muy fotogénicas al atardecer cuando el vapor se ilumina.</li>
+        </ul>
+        <h4>Contemplación</h4>
+        <ul>
+          <li><strong>Área de descanso de Barro (km ~9)</strong> — Fuente, mesa de piedra, sombra. Buen punto medio.</li>
+          <li><strong>Paseo fluvial del río Umia, Caldas</strong> — Bancos bajo árboles grandes, sonido de agua constante. Plano.</li>
+          <li><strong>Lavadero termal público de Caldas</strong> — Puedes meter los pies en agua caliente natural (~40-50°C), gratis, 24h. <strong>Sentarse con los pies en agua termal, mirando el río, al atardecer: probablemente el momento más restaurador del Camino entero.</strong> Especialmente bueno para las rodillas.</li>
+          <li><strong>Iglesia de Santa María de Caldas</strong> — Atrio con bancos de piedra y sombra. Tranquila.</li>
+        </ul>
+      </div>
+    </article>
+
+  </div>
+
+  <button class="btn-primary" id="btn-toggle-completed" data-stage-id="4">
+    Marcar como completada
+  </button>
+
+  <script type="module" src="/camino/js/app.js"></script>
+  <script type="module" src="/camino/js/progress.js"></script>
+  <script src="/camino/leaflet/leaflet.js"></script>
+  <script type="module" src="/camino/js/map.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => navigator.serviceWorker.register('/camino/sw.js'));
+    }
+  </script>
+</body>
+</html>

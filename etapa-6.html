@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#2c5f3d">
+  <title>Etapa 6 · Padrón → Santiago · Camino Portugués</title>
+  <link rel="manifest" href="/camino/manifest.json">
+  <link rel="stylesheet" href="/camino/css/style.css">
+  <link rel="stylesheet" href="/camino/leaflet/leaflet.css">
+  <link rel="icon" type="image/png" sizes="192x192" href="/camino/icons/icon-192.png">
+</head>
+<body>
+  <header class="topbar">
+    <a href="/camino/etapas.html" class="back" aria-label="Volver">←</a>
+    <div class="title">Etapa 6 · Padrón → Santiago</div>
+  </header>
+
+  <section class="hero">
+    <span class="badge">ETAPA 6 · ¡A SANTIAGO!</span>
+    <h1>Padrón → Santiago</h1>
+    <div class="meta">25 km · Viernes 22 mayo · Salida ~8:00</div>
+  </section>
+
+  <div class="accordion">
+
+    <!-- 1. Resumen -->
+    <article class="acc-item" id="resumen">
+      <button class="acc-head">
+        <span><span class="ic">📋</span>Resumen</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <table>
+          <tbody>
+            <tr><th>Distancia</th><td>25 km</td></tr>
+            <tr><th>Hora salida recomendada</th><td>8:00-8:30</td></tr>
+            <tr><th>Tiempo estimado</th><td>7h00 (a 4-4,5 km/h con paradas cada 5-6 km)</td></tr>
+            <tr><th>Dificultad</th><td>Llana con repechos suaves</td></tr>
+            <tr><th>Aviso rodillas</th><td>Etapa más larga. Tras O Milladoiro, suave descenso hacia Santiago. La emoción tira pero no aceleres en la entrada — los últimos 3 km de ciudad con asfalto duro castigan más que el camino de tierra.</td></tr>
+          </tbody>
+        </table>
+        <p>La etapa más larga. Sal a las 8:00-8:30 como tienes planeado.</p>
+      </div>
+    </article>
+
+    <!-- 2. Antes de salir -->
+    <article class="acc-item" id="antes">
+      <button class="acc-head">
+        <span><span class="ic">🥾</span>Antes de salir</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <p>Si no visitaste la Iglesia de Santiago y el Pedrón, merece la pena dedicarle 10 minutos antes de salir.</p>
+        <p><strong>AVISO: salida muy larga. Tras Padrón, pocos servicios hasta O Milladoiro (km 19). Sal de Padrón con desayuno y agua suficiente.</strong></p>
+      </div>
+    </article>
+
+    <!-- 3. Durante la etapa -->
+    <article class="acc-item" id="durante">
+      <button class="acc-head">
+        <span><span class="ic">🛤</span>Durante la etapa</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <div class="mapa" id="mapa-6" data-etapa="6"></div>
+        <ul>
+          <li><strong>Iria Flavia (km 1)</strong> — Justo a la salida de Padrón. Fue ciudad romana y sede episcopal hasta el siglo XI:
+            <br><br><strong>Colegiata de Santa María de Adina</strong> — Considerada el primer templo mariano del mundo. Del siglo XII, construida bajo el arzobispo Gelmírez.
+            <br><br><strong>Tumba de Camilo José Cela</strong> — En el cementerio de Adina, al pie de un olivo centenario. Cela nació aquí el 11 de mayo de 1916 y dejó instrucciones escritas de que <strong>nunca se limpiara</strong>, para que el paso del tiempo quedara evidenciado en la piedra. Sus últimas palabras antes de morir el 17 de enero de 2002 fueron: <strong>"Viva Iria Flavia."</strong>
+            <br><br><strong>Fundación Camilo José Cela</strong> — Frente a la colegiata, en edificios del siglo XVII que fueron residencias de canónigos.</li>
+          <li><strong>A Escravitude</strong> — Iglesia barroca bien conocida.</li>
+          <li><strong>O Milladoiro</strong> — El nombre viene de "humilladero" (en latín medieval, "humiliatorium"). Aquí, a una legua de Compostela, los peregrinos veían por primera vez las torres de la catedral. La tradición dictaba que se arrodillaran y se humillaran hasta tocar la tierra con la cabeza, agradeciendo al Apóstol Santiago haberles permitido llegar.
+            <br><br>Peregrinos ilustres que pasaron por aquí: Don Henrique (1097), Sancho II de Portugal (1244), Santa Isabel de Portugal (1325), Manuel I de Portugal (1502), Cosimo III de Medici (1669)...
+            <br><br>Al borde del camino está la <strong>Ermita de Santa María Magdalena</strong>, probablemente del siglo XII. Las huellas de fogatas en su interior son testimonio de los peregrinos que hicieron aquí su última parada.
+            <br><br><strong>Conexión con el Códice Calixtino:</strong> En 2012, la policía encontró el Códice robado aquí, en un garaje de O Milladoiro, dentro de un saco de pienso animal. Cuando pases por aquí, estarás caminando por el pueblo donde se ocultó la primera guía de viaje de Europa durante un año.</li>
+          <li><strong>Puente A Ponte Vella</strong> — Puente viejo sobre el río Sar, en A Rocha Vella.</li>
+          <li><strong>Monasterio de Santa María de Conxo</strong> — Opción alternativa antes de entrar en Santiago. Si tomas el camino de tierra en la bifurcación tras el puente, pasas por este monasterio.</li>
+          <li><strong>Rúa do Franco</strong> — La calle por la que entras en Santiago. El nombre <strong>no viene de Francisco Franco</strong> sino de los peregrinos "francos" (extranjeros llegados de Francia). Busca en las fachadas <strong>símbolos medievales</strong>: conchas de vieira (propiedades del Cabildo), árboles (símbolo de San Martín Pinario) y cinco estrellas (escudo de la Universidad). Hay una diminuta <strong>capillita cerrada con verja</strong> (1644) que marca el punto donde supuestamente se pararon los bueyes que transportaban el cuerpo de Santiago.</li>
+        </ul>
+        <h4>Bares y servicios en ruta</h4>
+        <table>
+          <thead>
+            <tr><th>Km</th><th>Lugar</th><th>Servicios</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>~1</td><td>Iria Flavia</td><td>Bar</td></tr>
+            <tr><td>~8</td><td>A Escravitude</td><td>Bar</td></tr>
+            <tr><td>~19</td><td>O Milladoiro</td><td><strong>ÚLTIMA gran zona de servicios — Mercadona, Gadis, varios bares. Última oportunidad de comer bien antes de Santiago</strong></td></tr>
+            <tr><td>25</td><td>Santiago de Compostela</td><td>Todos los servicios al llegar</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <!-- 4. Al llegar a Santiago -->
+    <article class="acc-item" id="llegar">
+      <button class="acc-head">
+        <span><span class="ic">🏛</span>Al llegar a Santiago</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <p>Has llegado. Tienes la tarde del viernes y la mañana del sábado para disfrutar Santiago. Tu alojamiento es el <strong>Loop Inn Hostel</strong> (Rúa de Tras Santa Clara), a unos 10 minutos a pie de la Plaza del Obradoiro. Llegas por la Rúa do Franco, que desemboca directamente en la catedral, así que la ruta del viernes empieza de forma natural.</p>
+
+        <div class="accordion" style="margin-top:8px;border:1px solid var(--borde);border-radius:8px">
+          <article class="acc-item">
+            <button class="acc-head">
+              <span>📅 Ruta viernes tarde (17:00 - 20:30)</span>
+              <span class="chev">›</span>
+            </button>
+            <div class="acc-body">
+              <p>Llegas por la Rúa do Franco hacia las 17:00. Tienes unas 3,5 horas. La prioridad absoluta es la Oficina del Peregrino (cierra a las 20:00 en temporada alta). El recorrido total es de aproximadamente 1,2 km a pie.</p>
+              <table>
+                <thead>
+                  <tr><th>#</th><th>Parada</th><th>Hora aprox.</th><th>Duración</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>1</td><td><strong>Oficina del Peregrino</strong> (Rúa Carretas 33)</td><td>17:00-17:45</td><td>45 min (colas)</td></tr>
+                  <tr><td>2</td><td><strong>Plaza del Obradoiro</strong></td><td>17:50-18:15</td><td>25 min</td></tr>
+                  <tr><td>3</td><td><strong>Catedral de Santiago</strong> (Abrazo al Apóstol + Cripta)</td><td>18:15-19:00</td><td>45 min</td></tr>
+                  <tr><td>4</td><td><strong>Pórtico de la Gloria</strong></td><td>19:00-19:30</td><td>30 min</td></tr>
+                  <tr><td>5</td><td>Cena / tapas en Rúa do Franco</td><td>19:30-20:30</td><td>libre</td></tr>
+                </tbody>
+              </table>
+
+              <h4>Detalle de cada parada</h4>
+
+              <p><strong>1. Oficina del Peregrino (17:00)</strong><br>
+              Rúa Carretas 33, a unos 300 metros al suroeste de la Plaza del Obradoiro. Ve directamente aquí al llegar. En temporada alta (mayo) el horario es de 08:00 a 20:00. Aquí recoges la Compostela. Lleva la credencial sellada. Las primeras acreditaciones eran conchas de vieira que los peregrinos compraban al llegar; el Papa amenazó con excomulgar a los falsificadores, lo que llevó a crear las "cartas probatorias" en el siglo XIII, antecesoras directas de la actual Compostela. En 2025 se emitieron casi 500.000 Compostelas.</p>
+
+              <p><strong>2. Plaza del Obradoiro (17:50)</strong><br>
+              Desde la Oficina del Peregrino son 250 metros cuesta arriba. "Obradoiro" viene del gallego "obradoiro" (taller) — la plaza era el lugar donde los canteros tenían sus talleres durante la construcción de la catedral. Santiago está representado en <strong>todos y cada uno de los edificios</strong> que rodean la plaza. Busca un detalle escondido: delante del Hostal hay unos <strong>pequeños agujeros en la piedra</strong> que forman un antiguo <strong>tablero de tres en raya</strong>. La torre de las campanas tiene una inclinación de unos <strong>40 centímetros</strong>. El <strong>Hostal de los Reyes Católicos</strong> es considerado el <strong>hotel más antiguo del mundo en funcionamiento continuo</strong>: inaugurado en 1509, da desayuno, comida y cena <strong>gratis a los 10 primeros peregrinos</strong> que demuestren haber completado el Camino.</p>
+
+              <p><strong>3. Catedral — Abrazo al Apóstol y Cripta (18:15)</strong><br>
+              Entra por la puerta principal. La catedral es románica-gótica-barroca, construcción iniciada en 1075. Entrada gratuita.<br><br>
+              <strong>Abrazo al Apóstol:</strong> Tradición documentada desde el siglo XIII. La estatua es de piedra policromada y representa a Santiago sedente como peregrino. Puede haber cola de 15-20 minutos.<br><br>
+              <strong>Cripta Apostólica:</strong> Bajo el altar mayor, donde se encuentran los restos del Apóstol junto con los de sus discípulos Atanasio y Teodoro. En el siglo XVI, el arzobispo ocultó los restos por miedo a un ataque del pirata Francis Drake. Fueron tan bien escondidos que se <strong>"perdieron" durante tres siglos</strong>. Redescubiertos el 29 de enero de 1879, el Papa León XIII los declaró auténticos en 1884.</p>
+
+              <p><strong>4. Pórtico de la Gloria (19:00)</strong><br>
+              Obra maestra del Maestro Mateo, <strong>20 años de trabajo</strong> (1168-1188). La fecha consta inscrita en la piedra de los dinteles (1 de abril de 1188).<br><br>
+              Lo que hay que buscar: la <strong>sonrisa de Daniel</strong> (considerada la primera sonrisa esculpida del arte románico) y el <strong>"Santo dos Croques"</strong> en la parte trasera del parteluz central — el propio Maestro Mateo, mirando humildemente al altar mayor. Durante siglos, estudiantes y peregrinos se golpeaban la cabeza contra la suya para absorber su sabiduría (hoy prohibido).<br><br>
+              Requiere reserva previa y entrada de pago (12 € con museo, 20 € con cubiertas). Si no hay plaza para el viernes, reserva para el sábado.</p>
+            </div>
+          </article>
+          <article class="acc-item">
+            <button class="acc-head">
+              <span>⛪ Ruta sábado mañana (con misa + botafumeiro)</span>
+              <span class="chev">›</span>
+            </button>
+            <div class="acc-body">
+              <p><strong>DATO CLAVE DEL DÍA:</strong> El <strong>23 de mayo</strong> es la solemnidad de la "Aparición del Apóstol en la Batalla de Clavijo", una de las <strong>12 fechas fijas</strong> en las que funciona el Botafumeiro de forma garantizada. Tu último día en Santiago es el sábado 23 de mayo. <strong>Vas a ver el Botafumeiro en funcionamiento.</strong> Intenta estar en la <strong>misa solemne de las 12:00</strong> de ese día.</p>
+              <p>La misa del peregrino a las 12:00 es el punto fijo. La ruta se organiza en dos bloques: antes de misa (9:00-11:45) y después de misa (13:00-14:45). El tren sale a las 16:26, así que hay que estar en el hostel a las 15:00 para recoger equipaje e ir a la estación (~20 minutos a pie del Loop Inn).</p>
+
+              <h4>BLOQUE A: Antes de misa (9:00 - 11:45)</h4>
+              <table>
+                <thead>
+                  <tr><th>#</th><th>Parada</th><th>Hora aprox.</th><th>Duración</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>1</td><td><strong>Mercado de Abastos</strong></td><td>9:00-9:30</td><td>30 min</td></tr>
+                  <tr><td>2</td><td><strong>Colegiata de Santa María de Sar</strong></td><td>9:45-10:30</td><td>45 min</td></tr>
+                  <tr><td>3</td><td><strong>Parque de la Alameda</strong></td><td>10:50-11:15</td><td>25 min</td></tr>
+                  <tr><td>4</td><td><strong>Catedral: Cubiertas</strong></td><td>11:20-11:50</td><td>30 min</td></tr>
+                </tbody>
+              </table>
+
+              <h4>PUNTO FIJO: Misa del Peregrino + Botafumeiro (12:00 - 13:00)</h4>
+              <p>La misa más tradicional de la catedral. Duración ~1 hora. Al inicio se leen las nacionalidades y lugares de origen de los peregrinos llegados el día anterior. Llega 10-15 minutos antes para coger sitio, la catedral se llena.</p>
+              <p><strong>EL BOTAFUMEIRO:</strong> "O que bota fume" = "el que echa humo" en gallego. 1,50 metros de altura, 54 kg de peso. El actual es de 1851. Lo mueven <strong>8 "tiraboleiros"</strong> con una cuerda de 60 metros. Alcanza <strong>68 km/h</strong>, rozando las bóvedas a solo un metro de distancia, con un arco de 50 metros de amplitud. Primera referencia documentada: 1322.</p>
+              <p>Las <strong>12 fechas fijas:</strong> Epifanía (6 ene), Domingo de Pascua, Ascensión, <strong>Festividad de la Batalla de Clavijo (23 mayo — TU FECHA)</strong>, Pentecostés, Santiago Apóstol (25 jul), Asunción (15 ago), Todos los Santos (1 nov), Cristo Rey, Inmaculada (8 dic), Navidad (25 dic) y Traslación del Apóstol (30 dic).</p>
+              <p><strong>Incidentes famosos:</strong> En 1499, mientras homenajeaban a la princesa Catalina de Aragón (futura primera esposa de Enrique VIII), la cuerda se rompió y el Botafumeiro salió disparado. En 1622 volvió a romperse. En 1937 se desprendió durante la Guerra Civil. En ninguno de los incidentes hubo víctimas.</p>
+
+              <h4>BLOQUE B: Después de misa (13:00 - 14:45)</h4>
+              <table>
+                <thead>
+                  <tr><th>#</th><th>Parada</th><th>Hora aprox.</th><th>Duración</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>6</td><td><strong>Museo de la Catedral</strong></td><td>13:00-13:30</td><td>30 min</td></tr>
+                  <tr><td>7</td><td><strong>Museo de las Peregrinaciones</strong></td><td>13:35-14:00</td><td>25 min</td></tr>
+                  <tr><td>8</td><td><strong>Monasterio de San Martín Pinario</strong></td><td>14:05-14:25</td><td>20 min</td></tr>
+                  <tr><td>9</td><td><strong>Museo do Pobo Galego</strong></td><td>14:30-14:45</td><td>15 min</td></tr>
+                </tbody>
+              </table>
+
+              <p><strong>Museo de la Catedral (13:00)</strong> — Aquí está el <strong>Códice Calixtino</strong> tras su rocambolesca recuperación. El Códice (siglo XII) es la primera guía de viaje de Europa. Desapareció el 5 de julio de 2011 — lo robó el electricista de la catedral durante 20 años, que actuó por venganza. Encontrado un año después en O Milladoiro en un saco de pienso. En su casa encontraron más de un millón de euros en efectivo que había ido sustrayendo de los cepillos durante años. Si compraste la entrada combinada con las Cubiertas y el Pórtico (20 €), ya está incluido.</p>
+
+              <p><strong>Monasterio de San Martín Pinario (14:05)</strong> — El <strong>segundo monasterio más grande de España</strong>, solo superado por El Escorial. 20.000 m². Fundado por benedictinos poco después del descubrimiento de los restos del Apóstol. La estatua que corona la fachada muestra a San Martín a caballo partiendo su capa con un mendigo. Los coros de nogal son considerados los más importantes de Galicia. <strong>Atención: cierra a las 14:00.</strong> Horario sábados: 10:00-14:00. Entrada: 3 € (tarifa peregrino).</p>
+
+              <p><strong>Museo do Pobo Galego (14:30)</strong> — Destaca su <strong>triple escalera helicoidal</strong>, obra maestra de Domingo de Andrade: la <strong>única escalera triple helicoidal del mundo</strong>. Tres rampas de piedra que se entrelazan de forma independiente — tres personas pueden subir o bajar simultáneamente sin cruzarse. Si el tiempo aprieta, al menos ve la escalera y el Parque de Bonaval adyacente (entrada libre). Desde aquí al Loop Inn son unos 800 metros.</p>
+
+              <h4>Horario crítico del sábado</h4>
+              <ul>
+                <li>14:00 — San Martín Pinario cierra.</li>
+                <li>14:00 — Mercado de Abastos cierra (visítalo a primera hora).</li>
+                <li>14:45 — Fin de ruta en Museo do Pobo Galego.</li>
+                <li>15:00 — Recoger equipaje en Loop Inn.</li>
+                <li>15:00-15:30 — Caminar a la estación de tren (~20 min).</li>
+                <li>16:26 — Sale el tren.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </article>
+
+    <!-- 5. Qué ver -->
+    <article class="acc-item" id="ver">
+      <button class="acc-head">
+        <span><span class="ic">👁</span>Qué ver</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <div class="item">
+          <div class="name">Praza da Quintana</div>
+          <div class="det">Una de las cuatro plazas que rodean la catedral. Aquí está la <strong>Puerta Santa</strong>, que solo se abre en Año Santo Compostelano (cuando el 25 de julio cae en domingo). Por la noche, un pilar de piedra que soporta pararrayos, con el juego de luces y sombras, parece la silueta de un <strong>peregrino misterioso con bastón</strong>.</div>
+        </div>
+        <div class="item">
+          <div class="name">Praza das Praterías</div>
+          <div class="det">La fuente central con cuatro caballos y la estrella. El nombre viene de los plateros medievales que se instalaban aquí vendiendo figuras de Santiago y conchas de vieira en plata a los peregrinos.</div>
+        </div>
+        <div class="item">
+          <div class="name">Parque de la Alameda</div>
+          <div class="det">Tres partes: Paseo de la Alameda, Carballeira de Santa Susana y Paseo da Ferradura. Las mejores vistas panorámicas de la catedral desde fuera. Busca la estatua de <strong>Las Dos Marías</strong> (1994): símbolo de libertad y resistencia contra la represión franquista. El <strong>Banco dos Namorados</strong> tiene forma curva que permite que los susurros viajen de una esquina a la otra. Curiosidad: dentro hay una Escuela Infantil diseñada por <strong>Antonio Palacios</strong> — el mismo arquitecto de O Porriño que viste en la etapa 1.</div>
+        </div>
+        <div class="item">
+          <div class="name">Mercado de Abastos</div>
+          <div class="det">El <strong>segundo lugar más visitado de Santiago</strong> después de la catedral. Los sábados recibe más de 4.000 personas. El primer edificio se inauguró en 1873; el actual (1937-1941) tiene ocho naves de granito. <strong>Cocina in situ:</strong> puedes comprar productos frescos y que te los cocinen en los restaurantes de la nave de hostelería, pagando solo la mano de obra. Abre de 08:00 a 14:00 los sábados.</div>
+        </div>
+        <div class="item">
+          <div class="name">Colegiata de Santa María de Sar</div>
+          <div class="det">La <strong>"Torre de Pisa" de Santiago</strong>: sus muros y columnas están visiblemente inclinados, un defecto estructural que se manifestó poco después de su construcción en el siglo XII. En época barroca se construyeron grandes <strong>arbotantes exteriores</strong> para sujetar los muros. Fue el <strong>primer Monumento Nacional de Galicia</strong> (declarado en 1895). Sábados abierta de 10:00 a 14:00. Entrada: 2 € (gratis con entrada del Pórtico o Museo de la Catedral).</div>
+        </div>
+        <div class="item">
+          <div class="name">Parque de Bonaval</div>
+          <div class="det">Antiguo cementerio convertido en parque (diseño de Álvaro Siza). Sereno, césped, muros de piedra. <strong>Muy pocos turistas lo conocen. Paz auténtica a 10 min del centro.</strong></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 6. Curiosidades de Santiago -->
+    <article class="acc-item" id="curiosidades">
+      <button class="acc-head">
+        <span><span class="ic">✨</span>Curiosidades de Santiago</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <ul>
+          <li><strong>El hotel más antiguo del mundo:</strong> El Hostal de los Reyes Católicos (hoy Parador) fue inaugurado en 1509 como hospital para peregrinos. Da desayuno, comida y cena gratis a los 10 primeros peregrinos que demuestren haber completado el Camino cada día.</li>
+          <li><strong>El tablero de tres en raya medieval:</strong> Delante del Hostal de los Reyes Católicos hay unos pequeños agujeros en la piedra que forman un antiguo tablero de tres en raya. Los peregrinos jugaban mientras esperaban.</li>
+          <li><strong>La torre torcida:</strong> La torre de las campanas de la catedral tiene una inclinación de unos 40 centímetros — una de las torres torcidas de España.</li>
+          <li><strong>El Códice robado en un saco de pienso:</strong> La primera guía de viaje de Europa estuvo oculta durante un año en un garaje de O Milladoiro, dentro de un saco de pienso animal. El ladrón era el electricista de la catedral, que además había sustraído más de un millón de euros de los cepillos durante 20 años.</li>
+          <li><strong>San Martín Pinario vs El Escorial:</strong> El monasterio de San Martín Pinario es el segundo más grande de España, solo superado por El Escorial. 20.000 m² en pleno centro de Santiago.</li>
+          <li><strong>La única escalera triple helicoidal del mundo:</strong> En el Museo do Pobo Galego. Tres rampas de piedra que se entrelazan — tres personas pueden subir o bajar simultáneamente sin cruzarse jamás.</li>
+          <li><strong>Las Dos Marías:</strong> Las hermanas Maruxa y Coralia Fandiño Ricart paseaban vestidas de forma excéntrica todos los días por la Alameda durante el franquismo. Hoy son símbolo de libertad y resistencia.</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 7. Gastronomía típica -->
+    <article class="acc-item" id="gastronomia">
+      <button class="acc-head">
+        <span><span class="ic">🍴</span>Gastronomía típica</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <ul>
+          <li><strong>Pulpo á feira</strong> — El clásico gallego.</li>
+          <li><strong>Tarta de Santiago</strong> — Almendra, azúcar y huevos, con la cruz de Santiago estarcida encima.</li>
+          <li><strong>Cocina del Mercado de Abastos</strong> — Compra marisco fresco y que te lo cocinen allí.</li>
+          <li><strong>Pimientos de Padrón</strong> — Ahora que conoces la historia de Herbón, los apreciarás más.</li>
+          <li><strong>Queso de tetilla</strong> — Con forma de pecho femenino (de ahí el nombre), suave y cremoso.</li>
+          <li><strong>Licor café</strong> — Típico digestivo gallego.</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 8. Ruta recomendada del pueblo -->
+    <article class="acc-item" id="ruta-pueblo">
+      <button class="acc-head">
+        <span><span class="ic">📍</span>Ruta recomendada del pueblo</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <p>Las rutas detalladas están dentro de la sección "Al llegar a Santiago" con los horarios exactos para el viernes tarde y el sábado mañana. Ver el acordeón de rutas arriba.</p>
+        <table>
+          <thead>
+            <tr><th></th><th>Viernes</th><th>Sábado</th></tr>
+          </thead>
+          <tbody>
+            <tr><th>Horario</th><td>17:00-20:30</td><td>9:00-14:45</td></tr>
+            <tr><th>Distancia a pie</th><td>~1,2 km</td><td>~4,5 km</td></tr>
+            <tr><th>Paradas</th><td>4</td><td>9</td></tr>
+            <tr><th>Gasto estimado</th><td>12-20 € (Pórtico/museo)</td><td>Incluido en combinada + 3 € Pinario</td></tr>
+          </tbody>
+        </table>
+        <h4>Entradas recomendadas (reservar online)</h4>
+        <ul>
+          <li><strong>Entrada combinada Catedral</strong> (Pórtico + Cubiertas + Museo): 20 € (16 € reducida). Reservar en visitas.catedraldesantiago.es. Máximo 7 días antes.</li>
+          <li><strong>Colegiata de Sar:</strong> 2 € (gratis con entrada de Catedral).</li>
+          <li><strong>San Martín Pinario:</strong> 3 € (tarifa peregrino).</li>
+          <li><strong>Museo Peregrinaciones:</strong> Gratuito.</li>
+          <li><strong>Museo do Pobo Galego:</strong> Gratuito.</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 9. Dónde comer -->
+    <article class="acc-item" id="comer">
+      <button class="acc-head">
+        <span><span class="ic">🍽</span>Dónde comer</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <div class="item">
+          <div class="name">Casa Manolo</div>
+          <div class="det">Rúa Travesa · Menú peregrino legendario ~10-11 €. El más famoso de Santiago.</div>
+        </div>
+        <div class="item">
+          <div class="name">O Gato Negro</div>
+          <div class="det">Rúa da Raíña · Se come de pie. Pulpo y queso. Raciones 5-10 €.</div>
+        </div>
+        <div class="item">
+          <div class="name">O Dezaseis</div>
+          <div class="det">Rúa de San Pedro 16 · Cocina gallega excelente ~15-18 €.</div>
+        </div>
+        <div class="item">
+          <div class="name">Mercado de Abastos</div>
+          <div class="det">Compras marisco y te lo cocinan por 2-5 € extra. Abierto M-S 8:00-15:00.</div>
+        </div>
+        <div class="item">
+          <div class="name">Café Bar Derby</div>
+          <div class="det">Rúa das Orfas · Café histórico. Tarta de Santiago.</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 10. Hotel de hoy -->
+    <article class="acc-item" id="hotel">
+      <button class="acc-head">
+        <span><span class="ic">🛏</span>Hotel de hoy</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <div class="item">
+          <div class="name">Loop Inn Santiago</div>
+          <div class="det">Rúa de Tras Santa Clara, 2 (~10 min de la catedral) · 63 €</div>
+          <p style="margin-top:8px"><a href="https://www.booking.com/hotel/es/loop-inn-santiago-de-compostela.es.html?checkin=2026-05-22&checkout=2026-05-23&group_adults=1&no_rooms=1" target="_blank" rel="noopener">Ver en Booking →</a></p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 11. Fotografía y contemplación -->
+    <article class="acc-item" id="fotos">
+      <button class="acc-head">
+        <span><span class="ic">📸</span>Fotografía y contemplación</span>
+        <span class="chev">›</span>
+      </button>
+      <div class="acc-body">
+        <h4>Fotografía</h4>
+        <ul>
+          <li><strong>Aldeas con hórreos y viñedos (km 5-15)</strong> — El paisaje gallego en estado puro. Cada aldea tiene al menos un hórreo con musgo junto a viñedos.</li>
+          <li><strong>O Milladoiro</strong> — Donde los peregrinos veían por primera vez las torres de Santiago. Monumento de dos peregrinos señalando la catedral. Mañana (~10:00-11:00).</li>
+          <li><strong>Plaza del Obradoiro</strong> — Mañana (~09:00-10:00), sol directo en la fachada.</li>
+          <li><strong>Plaza de la Quintana</strong> — Menos turística, Puerta Santa. Amanecer (~07:30): vacía, luz rasante, sombras dramáticas.</li>
+          <li><strong>Catedral desde la Alameda</strong> — <strong>Posiblemente la mejor foto de Santiago.</strong> Atardecer (~20:30-21:30), junto a las estatuas de las Dos Marías, las torres enmarcadas perfectamente.</li>
+        </ul>
+        <h4>Contemplación</h4>
+        <ul>
+          <li><strong>O Milladoiro</strong> — Sentarse en el mirador tras divisar Santiago por primera vez. Bancos y hierba.</li>
+          <li><strong>Catedral (interior)</strong> — El botafumeiro cuelga del techo, luz por las vidrieras. Si buscas silencio absoluto, ve a las 07:30.</li>
+          <li><strong>Plaza de la Quintana</strong> — A las 07:00 o a las 23:00 prácticamente vacía. Sentarse en las escaleras de piedra con la catedral encima, en silencio.</li>
+          <li><strong>Parque de la Alameda</strong> — Paseos bajo robles centenarios, bancos, vistas a la catedral.</li>
+          <li><strong>Parque de Bonaval</strong> — Antiguo cementerio convertido en parque (diseño de Álvaro Siza). Sereno, césped, muros de piedra. <strong>Muy pocos turistas lo conocen. Paz auténtica a 10 min del centro.</strong></li>
+        </ul>
+      </div>
+    </article>
+
+  </div>
+
+  <button class="btn-primary" id="btn-toggle-completed" data-stage-id="6">
+    Marcar como completada
+  </button>
+
+  <script type="module" src="/camino/js/app.js"></script>
+  <script type="module" src="/camino/js/progress.js"></script>
+  <script src="/camino/leaflet/leaflet.js"></script>
+  <script type="module" src="/camino/js/map.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => navigator.serviceWorker.register('/camino/sw.js'));
+    }
+  </script>
+</body>
+</html>
