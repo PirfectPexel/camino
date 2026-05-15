@@ -50,10 +50,12 @@ ul, ol { padding-left: 20px; }
   padding-top: calc(14px + env(safe-area-inset-top));
 }
 .topbar .back {
-  font-size: 20px;
+  font-size: 22px;
   line-height: 1;
   padding: 4px 8px;
   margin-left: -8px;
+  color: white;
+  font-weight: 400;
 }
 .topbar .title {
   font-size: 15px;
