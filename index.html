@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#2c5f3d">
+  <title>Camino Portugués</title>
+  <link rel="manifest" href="/camino/manifest.json">
+  <link rel="stylesheet" href="/camino/css/style.css">
+  <link rel="icon" type="image/png" sizes="192x192" href="/camino/icons/icon-192.png">
+</head>
+<body>
+  <section class="hero" id="hero">
+    <!-- Inyectado por JS según getCurrentStage() -->
+  </section>
+
+  <div class="quick-actions" id="quick-actions">
+    <!-- Inyectado por JS — 4 deep-links a etapa-N.html#seccion -->
+  </div>
+
+  <section class="next-section" id="next-section">
+    <!-- "PRÓXIMA" + tarjeta resumen — inyectado por JS si aplica -->
+  </section>
+
+  <nav class="footer-nav">
+    <a href="/camino/etapas.html">📅 Etapas</a>
+    <a href="/camino/equipaje.html">🎒 Equipaje</a>
+    <a href="/camino/antes.html">📋 Antes</a>
+    <a href="/camino/bastones.html">🦯 Bastones</a>
+  </nav>
+
+  <script type="module">
+    import { getCurrentStage } from '/camino/js/app.js';
+
+    const STAGES_INFO = [
+      { id: 0, titulo: 'Llegada a Tui', km: null, fecha: 'Sábado 16 mayo', salida: null },
+      { id: 1, titulo: 'Tui → O Porriño', km: 16, fecha: 'Domingo 17 mayo', salida: '~9:00' },
+      { id: 2, titulo: 'O Porriño → Redondela', km: 16, fecha: 'Lunes 18 mayo', salida: '~9:00' },
+      { id: 3, titulo: 'Redondela → Pontevedra', km: 20, fecha: 'Martes 19 mayo', salida: '~9:00' },
+      { id: 4, titulo: 'Pontevedra → Caldas', km: 22, fecha: 'Miércoles 20 mayo', salida: '~8:30' },
+      { id: 5, titulo: 'Caldas → Padrón', km: 19, fecha: 'Jueves 21 mayo', salida: '~9:00' },
+      { id: 6, titulo: 'Padrón → Santiago', km: 25, fecha: 'Viernes 22 mayo', salida: '~8:00' }
+    ];
+
+    const r = getCurrentStage();
+    const hero = document.getElementById('hero');
+    const qa = document.getElementById('quick-actions');
+    const next = document.getElementById('next-section');
+
+    function renderHero(stage, label) {
+      const badgeText =
+        label === 'today' ? 'HOY' :
+        label === 'santiago' ? '¡EN SANTIAGO!' : '';
+      const km = stage.km ? `${stage.km} km · ` : '';
+      const salida = stage.salida ? ` · Salida ${stage.salida}` : '';
+      hero.innerHTML = `
+        <span class="badge">${badgeText} · ETAPA ${stage.id}</span>
+        <h1>${stage.titulo}</h1>
+        <div class="meta">${km}${stage.fecha}${salida}</div>
+      `;
+    }
+
+    function renderQuickActions(stageId) {
+      // El "Ruta y mapa" para etapa 0 (sin caminata) apunta a la ruta del pueblo
+      const rutaHash = stageId === 0 ? '#ruta-pueblo' : '#durante';
+      qa.innerHTML = `
+        <a class="quick-action" href="/camino/etapa-${stageId}.html${rutaHash}"><span class="ic">📍</span>Ruta y mapa</a>
+        <a class="quick-action" href="/camino/etapa-${stageId}.html#comer"><span class="ic">🍴</span>Dónde comer</a>
+        <a class="quick-action" href="/camino/etapa-${stageId}.html#hotel"><span class="ic">🛏</span>Hotel de hoy</a>
+        <a class="quick-action" href="/camino/etapa-${stageId}.html#ver"><span class="ic">👁</span>Qué ver</a>
+      `;
+    }
+
+    function renderNext(nextId) {
+      if (nextId === null || nextId === undefined) {
+        next.innerHTML = `
+          <div class="section-label">Felicidades</div>
+          <div class="card"><strong>¡Has terminado el Camino!</strong></div>
+        `;
+        return;
+      }
+      const ns = STAGES_INFO[nextId];
+      const km = ns.km ? `${ns.km} km · ` : '';
+      next.innerHTML = `
+        <div class="section-label">Próxima</div>
+        <a class="card" href="/camino/etapa-${ns.id}.html" style="display:block;text-decoration:none;color:inherit">
+          <div style="font-weight:600;color:#2c5f3d">Etapa ${ns.id} · ${ns.titulo}</div>
+          <div style="font-size:13px;color:#5a6e5c;margin-top:2px">${km}${ns.fecha}</div>
+        </a>
+      `;
+    }
+
+    if (r.label === 'pre') {
+      hero.innerHTML = `
+        <span class="badge">EN ${r.daysToStart} ${r.daysToStart === 1 ? 'DÍA' : 'DÍAS'}</span>
+        <h1>Comienza el Camino</h1>
+        <div class="meta">Sábado 16 mayo · Llegada a Tui</div>
+      `;
+      qa.style.display = 'none';
+      renderNext(0);
+    } else if (r.label === 'post') {
+      hero.innerHTML = `
+        <span class="badge">¡COMPLETADO!</span>
+        <h1>Buen Camino terminado</h1>
+        <div class="meta">Tui → Santiago de Compostela</div>
+      `;
+      qa.style.display = 'none';
+      next.innerHTML = `
+        <div class="section-label">Recuerdo</div>
+        <a class="card" href="/camino/etapas.html" style="display:block;text-decoration:none;color:inherit">
+          <div style="font-weight:600;color:#2c5f3d">Ver las 7 etapas</div>
+        </a>
+      `;
+    } else {
+      const stage = STAGES_INFO[r.stageId];
+      renderHero(stage, r.label);
+      renderQuickActions(r.stageId);
+      renderNext(r.nextStageId);
+    }
+  </script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => navigator.serviceWorker.register('/camino/sw.js'));
+    }
+  </script>
+</body>
+</html>
