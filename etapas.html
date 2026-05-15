@@ -26,14 +26,66 @@
     import { getCurrentStage } from '/camino/js/app.js';
     import { isCompleted, getCompletedStages } from '/camino/js/progress.js';
 
+    // Cada etapa lista los pueblos por los que pasa, terminando en el destino.
+    // Cada pueblo enlaza a etapa-N.html#ancla del sub-acordeón correspondiente.
     const STAGES_INFO = [
-      { id: 0, sub: '0', tramo: 'Llegada a Tui', km: null, fecha: 'Sáb 16 may' },
-      { id: 1, sub: '1', tramo: 'Tui → O Porriño',     km: 16, fecha: 'Dom 17 may' },
-      { id: 2, sub: '2', tramo: 'O Porriño → Redondela', km: 16, fecha: 'Lun 18 may' },
-      { id: 3, sub: '3', tramo: 'Redondela → Pontevedra', km: 20, fecha: 'Mar 19 may' },
-      { id: 4, sub: '4', tramo: 'Pontevedra → Caldas', km: 22, fecha: 'Mié 20 may' },
-      { id: 5, sub: '5', tramo: 'Caldas → Padrón',     km: 19, fecha: 'Jue 21 may' },
-      { id: 6, sub: '6', tramo: 'Padrón → Santiago',   km: 25, fecha: 'Vie 22 may' }
+      {
+        id: 0, sub: '0', tramo: 'Llegada a Tui', km: null, fecha: 'Sáb 16 may',
+        pueblos: [
+          { ancla: 'llegar', name: 'Tui', destino: true }
+        ]
+      },
+      {
+        id: 1, sub: '1', tramo: 'Tui → O Porriño', km: 16, fecha: 'Dom 17 may',
+        pueblos: [
+          { ancla: 'pueblo-ribadelouro', name: 'Ribadelouro' },
+          { ancla: 'pueblo-orbenlle',    name: 'Orbenlle' },
+          { ancla: 'llegar',             name: 'O Porriño', destino: true }
+        ]
+      },
+      {
+        id: 2, sub: '2', tramo: 'O Porriño → Redondela', km: 16, fecha: 'Lun 18 may',
+        pueblos: [
+          { ancla: 'pueblo-mos',        name: 'Mos' },
+          { ancla: 'pueblo-saxamonde',  name: 'Saxamonde' },
+          { ancla: 'llegar',            name: 'Redondela', destino: true }
+        ]
+      },
+      {
+        id: 3, sub: '3', tramo: 'Redondela → Pontevedra', km: 20, fecha: 'Mar 19 may',
+        pueblos: [
+          { ancla: 'pueblo-cesantes',       name: 'Cesantes' },
+          { ancla: 'pueblo-arcade',         name: 'Arcade' },
+          { ancla: 'pueblo-ponte-sampaio',  name: 'Ponte Sampaio' },
+          { ancla: 'llegar',                name: 'Pontevedra', destino: true }
+        ]
+      },
+      {
+        id: 4, sub: '4', tramo: 'Pontevedra → Caldas', km: 22, fecha: 'Mié 20 may',
+        pueblos: [
+          { ancla: 'pueblo-san-amaro', name: 'San Amaro' },
+          { ancla: 'pueblo-briallos',  name: 'Briallos' },
+          { ancla: 'llegar',           name: 'Caldas de Reis', destino: true }
+        ]
+      },
+      {
+        id: 5, sub: '5', tramo: 'Caldas → Padrón', km: 19, fecha: 'Jue 21 may',
+        pueblos: [
+          { ancla: 'pueblo-carracedo',     name: 'Carracedo' },
+          { ancla: 'pueblo-pontecesures',  name: 'Pontecesures' },
+          { ancla: 'llegar',               name: 'Padrón', destino: true }
+        ]
+      },
+      {
+        id: 6, sub: '6', tramo: 'Padrón → Santiago', km: 25, fecha: 'Vie 22 may',
+        pueblos: [
+          { ancla: 'pueblo-a-escravitude', name: 'A Escravitude' },
+          { ancla: 'pueblo-picarana',      name: 'Picaraña' },
+          { ancla: 'pueblo-teo',           name: 'Teo' },
+          { ancla: 'pueblo-o-milladoiro',  name: 'O Milladoiro' },
+          { ancla: 'llegar',               name: 'Santiago', destino: true }
+        ]
+      }
     ];
 
     const r = getCurrentStage();
@@ -55,14 +107,28 @@
       const km = s.km ? `${s.km} km · ` : '';
       const todayBadge = isToday ? ' <span style="color:#c89a3c;font-weight:700">· HOY</span>' : '';
 
+      // Sub-pueblos de la etapa (siempre visibles)
+      const subList = s.pueblos.map((p, i) => {
+        const num = `${s.id}.${i + 1}`;
+        const destinoBadge = p.destino ? ' <span style="color:#c89a3c;font-size:10px;font-weight:700">· DESTINO</span>' : '';
+        return `
+          <a href="/camino/etapa-${s.id}.html#${p.ancla}" class="t-pueblo${p.destino ? ' destino' : ''}">
+            <span class="t-pueblo-num">${num}</span>${p.name}${destinoBadge}
+          </a>
+        `;
+      }).join('');
+
       return `
-        <a href="/camino/etapa-${s.id}.html" class="${cls.join(' ')}" style="text-decoration:none;color:inherit;display:flex">
-          <div class="${numCls.join(' ')}">${numContent}</div>
-          <div class="t-info">
-            <div class="t-titulo">${s.tramo}${todayBadge}</div>
-            <div class="t-meta">${km}${s.fecha}</div>
-          </div>
-        </a>
+        <div class="t-group">
+          <a href="/camino/etapa-${s.id}.html" class="${cls.join(' ')}" style="text-decoration:none;color:inherit;display:flex">
+            <div class="${numCls.join(' ')}">${numContent}</div>
+            <div class="t-info">
+              <div class="t-titulo">${s.tramo}${todayBadge}</div>
+              <div class="t-meta">${km}${s.fecha}</div>
+            </div>
+          </a>
+          <div class="t-pueblos">${subList}</div>
+        </div>
       `;
     }).join('');
 

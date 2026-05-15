@@ -280,6 +280,55 @@ ul, ol { padding-left: 20px; }
 .t-info .t-titulo { font-weight: 600; font-size: 14px; }
 .t-info .t-meta { font-size: 12px; color: var(--texto-suave); }
 
+/* === SUB-PUEBLOS dentro de timeline (1.1, 1.2, ...) === */
+.t-group {
+  margin-bottom: 12px;
+}
+.t-group .t-item {
+  margin-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.t-pueblos {
+  background: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 6px 14px 10px 56px;
+  margin-top: -1px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  border-top: 1px dashed var(--borde);
+}
+.t-group .t-item.today + .t-pueblos {
+  background: #fff8e8;
+  border: 2px solid var(--dorado);
+  border-top: 1px dashed var(--dorado);
+  margin-top: -2px;
+}
+.t-pueblo {
+  display: block;
+  padding: 7px 4px;
+  font-size: 13px;
+  color: var(--texto);
+  border-bottom: 1px solid #f0f0f0;
+  text-decoration: none;
+}
+.t-pueblo:last-child { border-bottom: none; }
+.t-pueblo-num {
+  display: inline-block;
+  width: 32px;
+  font-weight: 700;
+  font-size: 11px;
+  color: var(--verde-medio);
+  letter-spacing: 0.3px;
+}
+.t-pueblo.destino .t-pueblo-num {
+  color: var(--dorado);
+}
+.t-pueblo.destino {
+  font-weight: 600;
+  color: var(--verde-oscuro);
+}
+
 /* === FOOTER NAV (links menores) === */
 .footer-nav {
   padding: 16px;
