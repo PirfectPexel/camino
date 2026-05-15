@@ -2,7 +2,7 @@
 // Estrategia: cache-first con fallback a red.
 // IMPORTANTE: bumpear CACHE_VERSION cada vez que cambies contenido para forzar update.
 
-const CACHE_VERSION = 'camino-v8';
+const CACHE_VERSION = 'camino-v9';
 const SCOPE = '/camino';
 
 const PRECACHE_URLS = [
@@ -16,6 +16,7 @@ const PRECACHE_URLS = [
   `${SCOPE}/etapa-4.html`,
   `${SCOPE}/etapa-5.html`,
   `${SCOPE}/etapa-6.html`,
+  `${SCOPE}/pueblo-valenca.html`,
   `${SCOPE}/pueblo-ribadelouro.html`,
   `${SCOPE}/pueblo-orbenlle.html`,
   `${SCOPE}/pueblo-mos.html`,
