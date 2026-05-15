@@ -36,6 +36,16 @@
       "type": "Feature",
       "properties": { "tipo": "fin", "nombre": "Redondela" },
       "geometry": { "type": "Point", "coordinates": [-8.6092, 42.2826] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "tipo": "intermedio", "nombre": "Mos", "ancla": "pueblo-mos" },
+      "geometry": { "type": "Point", "coordinates": [-8.6220, 42.2002] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "tipo": "intermedio", "nombre": "Saxamonde", "ancla": "pueblo-saxamonde" },
+      "geometry": { "type": "Point", "coordinates": [-8.6155, 42.2415] }
     }
   ]
 }
