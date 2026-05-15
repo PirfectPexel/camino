@@ -36,6 +36,16 @@
       "type": "Feature",
       "properties": { "tipo": "fin", "nombre": "O Porriño" },
       "geometry": { "type": "Point", "coordinates": [-8.6189, 42.1597] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "tipo": "intermedio", "nombre": "Ribadelouro", "ancla": "pueblo-ribadelouro" },
+      "geometry": { "type": "Point", "coordinates": [-8.6315, 42.0780] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "tipo": "intermedio", "nombre": "Orbenlle", "ancla": "pueblo-orbenlle" },
+      "geometry": { "type": "Point", "coordinates": [-8.6225, 42.1240] }
     }
   ]
 }
