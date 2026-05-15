@@ -31,11 +31,21 @@ window.initMapa = async function initMapa(mapaEl) {
       }),
       pointToLayer: (feat, latlng) => {
         const tipo = feat.properties && feat.properties.tipo;
-        const color = tipo === 'inicio' ? '#2c5f3d' : tipo === 'fin' ? '#c89a3c' : '#5a8d6e';
+        // inicio: verde oscuro grande · fin: dorado grande · intermedio: verde medio mediano
+        const color =
+          tipo === 'inicio' ? '#2c5f3d' :
+          tipo === 'fin' ? '#c89a3c' :
+          '#5a8d6e';
+        const radius = (tipo === 'inicio' || tipo === 'fin') ? 7 : 5;
+        const nombre = feat.properties.nombre || '';
+        const ancla = feat.properties.ancla;  // opcional: id del sub-acordeón
+        const popup = ancla
+          ? `<strong>${nombre}</strong><br><a href="#${ancla}" onclick="document.getElementById('${ancla}')?.classList.add('open');document.getElementById('${ancla}')?.scrollIntoView({behavior:'smooth'})">Ver detalles ↓</a>`
+          : `<strong>${nombre}</strong>`;
         return L.circleMarker(latlng, {
-          radius: 6, fillColor: color, color: '#fff',
+          radius, fillColor: color, color: '#fff',
           weight: 2, opacity: 1, fillOpacity: 1
-        }).bindPopup(feat.properties.nombre || '');
+        }).bindPopup(popup);
       }
     }).addTo(map);
 
