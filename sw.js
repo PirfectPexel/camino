@@ -2,7 +2,7 @@
 // Estrategia: cache-first con fallback a red.
 // IMPORTANTE: bumpear CACHE_VERSION cada vez que cambies contenido para forzar update.
 
-const CACHE_VERSION = 'camino-v5';
+const CACHE_VERSION = 'camino-v6';
 const SCOPE = '/camino';
 
 const PRECACHE_URLS = [
@@ -49,6 +49,20 @@ const PRECACHE_URLS = [
   `${SCOPE}/leaflet/images/layers-2x.png`,
   `${SCOPE}/icons/icon-192.png`,
   `${SCOPE}/icons/icon-512.png`,
+  // Imágenes de POIs (Wikimedia Commons, descargadas localmente)
+  `${SCOPE}/img/catedral-tui.jpg`,
+  `${SCOPE}/img/puente-internacional.jpg`,
+  `${SCOPE}/img/porrino-concello.jpg`,
+  `${SCOPE}/img/redondela-iglesia.jpg`,
+  `${SCOPE}/img/mos-pazo.jpg`,
+  `${SCOPE}/img/santo-domingo-pontevedra.jpg`,
+  `${SCOPE}/img/pontevedra-alameda.jpg`,
+  `${SCOPE}/img/arcade-estatua.jpg`,
+  `${SCOPE}/img/caldas-santa-maria.jpg`,
+  `${SCOPE}/img/padron-iglesia-santiago.jpg`,
+  `${SCOPE}/img/catedral-santiago.jpg`,
+  `${SCOPE}/img/obradoiro.jpg`,
+  `${SCOPE}/img/milladoiro.jpg`,
   `${SCOPE}/rutas/etapa-1.geojson`,
   `${SCOPE}/rutas/etapa-2.geojson`,
   `${SCOPE}/rutas/etapa-3.geojson`,
