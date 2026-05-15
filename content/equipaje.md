@@ -71,10 +71,8 @@
 - [x] Barritas energeticas
 - [x] Jabón pequeño para lavar ropa a mano
 - [x] Desodorante
+- [ ] Vaselina o crema antifricción
 
 - [ ] Bolígrafo
 - [x] Gel + Champu
 - [x] Pinzas ropa (x8)
-
-### Varios
-- [ ] Vaselina o crema antifricción
