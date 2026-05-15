@@ -1,0 +1,333 @@
+/* ========================================================================
+   CAMINO PORTUGUÉS PWA — STYLE
+   Mood: Naturaleza gallega (verde + dorado peregrino)
+   ======================================================================== */
+
+/* === RESET === */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #1d2e1f;
+  background: #f5f7f4;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+img { max-width: 100%; display: block; }
+button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+a { color: #2c5f3d; text-decoration: none; }
+ul, ol { padding-left: 20px; }
+
+/* === PALETA (variables CSS) === */
+:root {
+  --verde-oscuro: #2c5f3d;
+  --verde-medio: #5a8d6e;
+  --verde-claro: #f0f4ed;
+  --dorado: #c89a3c;
+  --dorado-claro: #e8c98a;
+  --crema: #f5f7f4;
+  --texto: #1d2e1f;
+  --texto-suave: #5a6e5c;
+  --texto-disabled: #999;
+  --borde: #e0e0e0;
+  --blanco: #ffffff;
+}
+
+/* === TOPBAR === */
+.topbar {
+  background: var(--verde-oscuro);
+  color: white;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding-top: calc(14px + env(safe-area-inset-top));
+}
+.topbar .back {
+  font-size: 20px;
+  line-height: 1;
+  padding: 4px 8px;
+  margin-left: -8px;
+}
+.topbar .title {
+  font-size: 15px;
+  font-weight: 600;
+  flex: 1;
+}
+
+/* === HERO CARD (etapa de hoy) === */
+.hero {
+  background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro));
+  color: white;
+  padding: 18px 16px;
+}
+.hero .badge {
+  display: inline-block;
+  background: var(--dorado);
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 12px;
+  letter-spacing: 0.5px;
+}
+.hero h1 {
+  font-size: 22px;
+  margin: 8px 0 4px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.hero .meta {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+/* === QUICK ACTIONS (grid 2x2) === */
+.quick-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 12px 16px 16px;
+  background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro));
+}
+.quick-action {
+  background: rgba(255,255,255,0.15);
+  color: white;
+  padding: 14px 8px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background 0.15s;
+}
+.quick-action:active { background: rgba(255,255,255,0.3); }
+.quick-action .ic { font-size: 18px; display: block; margin-bottom: 4px; }
+
+/* === CARD genérica === */
+.card {
+  background: var(--blanco);
+  border-radius: 12px;
+  margin: 12px 16px;
+  padding: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+/* === SECCIÓN "PRÓXIMA" === */
+.next-section {
+  padding: 16px;
+}
+.section-label {
+  font-size: 11px;
+  color: var(--texto-suave);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* === ACORDEÓN === */
+.accordion {
+  background: white;
+  margin-top: 12px;
+}
+.acc-item {
+  border-bottom: 1px solid var(--borde);
+}
+.acc-head {
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--verde-oscuro);
+  text-align: left;
+  background: white;
+}
+.acc-head .ic { margin-right: 8px; font-size: 18px; }
+.acc-head .chev {
+  color: var(--texto-disabled);
+  font-size: 18px;
+  transition: transform 0.2s;
+}
+.acc-item.open .acc-head .chev {
+  transform: rotate(90deg);
+  color: var(--dorado);
+}
+.acc-body {
+  padding: 0 16px 16px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--texto);
+  display: none;
+}
+.acc-item.open .acc-body { display: block; }
+.acc-body p { margin-bottom: 12px; }
+.acc-body ul, .acc-body ol { margin-bottom: 12px; }
+.acc-body li { margin-bottom: 4px; }
+.acc-body strong { color: var(--verde-oscuro); }
+.acc-body h4 {
+  font-size: 14px;
+  color: var(--verde-oscuro);
+  margin-top: 12px;
+  margin-bottom: 6px;
+}
+.acc-body table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin: 8px 0;
+}
+.acc-body th, .acc-body td {
+  padding: 8px 6px;
+  border-bottom: 1px solid var(--borde);
+  text-align: left;
+}
+.acc-body th {
+  background: var(--verde-claro);
+  color: var(--verde-oscuro);
+  font-size: 12px;
+}
+
+/* === ITEM (restaurante / POI) === */
+.item {
+  background: var(--verde-claro);
+  border-left: 3px solid var(--dorado);
+  padding: 10px 12px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+.item .name { font-weight: 600; color: var(--verde-oscuro); }
+.item .det { font-size: 12px; color: var(--texto-suave); margin-top: 2px; }
+
+/* === MAPA Leaflet === */
+.mapa {
+  height: 300px;
+  width: 100%;
+  border-radius: 8px;
+  margin: 8px 0 12px;
+}
+
+/* === BOTÓN PRIMARIO (marcar completada) === */
+.btn-primary {
+  width: calc(100% - 32px);
+  margin: 16px;
+  padding: 14px;
+  background: var(--verde-oscuro);
+  color: white;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  display: block;
+}
+.btn-primary.completed {
+  background: var(--verde-claro);
+  color: var(--verde-oscuro);
+  border: 1px solid var(--verde-medio);
+}
+
+/* === TIMELINE etapas.html === */
+.progress-bar {
+  height: 6px;
+  background: var(--borde);
+  margin: 16px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--dorado), var(--verde-oscuro));
+  transition: width 0.3s;
+}
+.timeline { padding: 0 16px 16px; }
+.t-item {
+  background: white;
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.t-item.today {
+  background: #fff8e8;
+  border: 2px solid var(--dorado);
+}
+.t-item.done { opacity: 0.55; }
+.t-num {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: var(--verde-oscuro);
+  color: white;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.t-num.today { background: var(--dorado); }
+.t-num.done { background: var(--texto-disabled); }
+.t-info { flex: 1; }
+.t-info .t-titulo { font-weight: 600; font-size: 14px; }
+.t-info .t-meta { font-size: 12px; color: var(--texto-suave); }
+
+/* === FOOTER NAV (links menores) === */
+.footer-nav {
+  padding: 16px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--texto-suave);
+}
+.footer-nav a {
+  color: var(--verde-oscuro);
+  margin: 0 8px;
+}
+
+/* === EQUIPAJE: lista checkboxes (read-only) === */
+.eq-section {
+  background: white;
+  margin: 12px 16px;
+  border-radius: 10px;
+  padding: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.eq-section h3 {
+  font-size: 14px;
+  color: var(--verde-oscuro);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.eq-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+  font-size: 14px;
+}
+.eq-item .check {
+  width: 18px; height: 18px;
+  border: 2px solid var(--borde);
+  border-radius: 4px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  font-size: 12px;
+  color: var(--verde-oscuro);
+}
+.eq-item.done .check {
+  background: var(--verde-oscuro);
+  color: white;
+  border-color: var(--verde-oscuro);
+}
+.eq-item.done .label { text-decoration: line-through; color: var(--texto-suave); }
+
+/* === ESTADOS GLOBALES === */
+.hidden { display: none !important; }
